@@ -8,12 +8,7 @@
 
   <ItemGroup>
     <Folder Include="Views\AboutUs\Components\" />
-    <Folder Include="Views\AboutUs\Pages\" />
-    <Folder Include="Views\Contact\Pages\" />
-    <Folder Include="Views\Landing\Components\" />
-    <Folder Include="Views\Legal\Pages\" />
     <Folder Include="Views\Services\Components\" />
-    <Folder Include="Views\Services\Pages\" />
   </ItemGroup>
 
 </Project>

@@ -1,8 +1,15 @@
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "VORTEX Renewables - Energía que impulsa el futuro";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome to Vortex Renewables</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+@* Incluir componentes de la landing *@
+<partial name="~/Views/Landing/Components/_Hero.cshtml" />
+<partial name="~/Views/Landing/Components/_About.cshtml" />
+<partial name="~/Views/Landing/Components/_Services.cshtml" />
+<partial name="~/Views/Landing/Components/_Values.cshtml" />
+<partial name="~/Views/Landing/Components/_Stats.cshtml" />
+<partial name="~/Views/Landing/Components/_Contact.cshtml" />
+
+@section Scripts {
+    <script src="~/js/navigation.js" asp-append-version="true"></script>
+}

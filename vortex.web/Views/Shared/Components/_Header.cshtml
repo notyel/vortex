@@ -1,0 +1,43 @@
+@* Header Component - Navegación principal *@
+
+<header class="header">
+    <div class="header-container">
+        <div class="header-logo">
+            <a asp-controller="Landing" asp-action="Index">
+                <img src="~/images/logo.png" alt="VORTEX" class="logo-image" />
+            </a>
+        </div>
+        
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+                <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                <li><a href="#valores" class="nav-link">Valores</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                <li>
+                    <a asp-controller="AboutUs" asp-action="Index" class="btn-primary">
+                        Sobre Nosotros <span class="material-symbols-outlined">
+                            arrow_circle_right
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="nav-toggle" id="navToggle">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </div>
+    </div>
+    
+    <div class="nav-mobile" id="navMobile">
+        <ul class="nav-list">
+            <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+            <li><a href="#servicios" class="nav-link">Servicios</a></li>
+            <li><a href="#valores" class="nav-link">Valores</a></li>
+            <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            <li><a asp-controller="AboutUs" asp-action="Index" class="btn-primary">Sobre Nosotros <span class="material-symbols-outlined btn-icon">arrow_circle_right</span></a></li>
+        </ul>
+    </div>
+</header>
