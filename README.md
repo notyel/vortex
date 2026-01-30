@@ -10,7 +10,19 @@ Vortex Renewables es una compañía pionera  en soluciones energéticas 100% lim
 - **Razor Pages** - Motor de vistas
 - **CSS3** - Estilos personalizados con sistema de variables CSS
 
-## 🎨 Estructura del Proyecto
+## 🎨 Identidad de Marca
+
+### Colores Primarios
+
+**Color Corporativo**
+- `#0077B6` (RGB: 0, 119, 182)
+
+**Colores Acompañantes**
+- `#0F9D58` (RGB: 15, 157, 88) - Acompañante principal
+- `#73BE44` (RGB: 115, 190, 68) - Gradiente de #0F9D58
+- `#6AB13D` (RGB: 106, 177, 61)
+
+## 📁 Estructura del Proyecto
 
 ### Arquitectura de Carpetas
 
