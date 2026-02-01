@@ -1,15 +1,102 @@
-@* About Section - Sección Sobre Nosotros *@
-
 <section id="nosotros" class="section about">
     <div class="container">
-        <h2 class="section-title">Sobre Nosotros</h2>
         <div class="about-content">
-            <div class="about-text">
-                <p>
-                    Vortex Renewables es una compañía pionera en soluciones energéticas 100% limpias. 
+            <div class="about-image-container">
+                <div class="about-image-wrapper">
+                    <img src="~/images/01.jpg" alt="Vortex Renewables - Energía Renovable" class="about-image" />
+                    <div class="about-badge">
+                        <div class="badge-number">30</div>
+                        <div class="badge-text">Años de<br />Experiencia</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="about-text-container">
+                <div class="about-header">
+                    <div class="about-label">
+                        <span class="label-line"></span>
+                        <span class="label-text">SOBRE NOSOTROS</span>
+                    </div>
+                    <h2 class="about-title">
+                        Vortex Renewables es una compañía pionera en <span class="highlight">soluciones energéticas 100% limpias.</span>
+                    </h2>
+                </div>
+                
+                <p class="about-description">
                     Combinamos ingeniería, gestión ambiental y experiencia jurídica para convertir vórtices 
                     naturales en energía que impulsa comunidades y empresas.
                 </p>
+                
+                <div class="about-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L4 7V12C4 16.4 6.8 20.4 12 22C17.2 20.4 20 16.4 20 12V7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 8V12L14 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Soluciones Altamente Sostenibles</h3>
+                            <p class="feature-description">Energía limpia y renovable para un futuro sostenible.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Mejor Energía Renovable</h3>
+                            <p class="feature-description">Tecnología innovadora que transforma recursos naturales.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="#contacto" class="about-cta">
+                    Descubre Más
+                    <svg viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        
+        @* Info Cards *@
+        <div class="about-cards">
+            <div class="info-card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 7H4C2.89543 7 2 7.89543 2 9V19C2 20.1046 2.89543 21 4 21H20C21.1046 21 22 20.1046 22 19V9C22 7.89543 21.1046 7 20 7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16 21V5C16 4.46957 15.7893 3.96086 15.4142 3.58579C15.0391 3.21071 14.5304 3 14 3H10C9.46957 3 8.96086 3.21071 8.58579 3.58579C8.21071 3.96086 8 4.46957 8 5V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3 class="card-title">Equipo Especializado</h3>
+                <p class="card-description">Profesionales altamente capacitados en ingeniería de energías renovables y gestión ambiental.</p>
+            </div>
+            
+            <div class="info-card featured">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+                        <path d="M12 1V4M12 20V23M4.22 4.22L6.34 6.34M17.66 17.66L19.78 19.78M1 12H4M20 12H23M4.22 19.78L6.34 17.66M17.66 6.34L19.78 4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3 class="card-title">Tecnología de Vanguardia</h3>
+                <p class="card-description">Soluciones innovadoras que aprovechan los vórtices naturales para generar energía limpia y eficiente.</p>
+            </div>
+            
+            <div class="info-card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
+                        <path d="M8 21H16M12 17V21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M7 8L10 11L7 14M13 12H17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3 class="card-title">Monitoreo Inteligente</h3>
+                <p class="card-description">Sistemas avanzados de seguimiento en tiempo real para optimizar el rendimiento energético.</p>
             </div>
         </div>
     </div>
