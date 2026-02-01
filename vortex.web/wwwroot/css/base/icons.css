@@ -18,6 +18,9 @@
     text-rendering: optimizeLegibility;
     font-feature-settings: 'liga';
     vertical-align: middle;
+    /* Reservar espacio para el icono antes de que cargue la fuente */
+    min-width: 24px;
+    min-height: 24px;
 }
 
 .material-icons.icon-sm {
