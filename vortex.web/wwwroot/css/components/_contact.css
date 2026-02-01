@@ -1,0 +1,63 @@
+/* Contact Component Styles */
+
+.contact {
+    background: linear-gradient(135deg, var(--color-corporate), var(--color-accent-primary));
+    color: var(--color-white);
+}
+
+.contact .section-title,
+.contact .section-subtitle {
+    color: var(--color-white);
+}
+
+.contact-info {
+    display: grid;
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-2xl);
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
+    backdrop-filter: blur(10px);
+}
+
+.contact-item-icon {
+    color: var(--color-accent-light);
+}
+
+.contact-item-icon .material-icons {
+    color: var(--color-accent-light);
+}
+
+.contact-item-content h3 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-xs);
+}
+
+.contact-item-content p,
+.contact-item-content a {
+    opacity: 0.9;
+    font-size: var(--font-size-base);
+}
+
+.contact-item-content a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    .contact-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .contact-info {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

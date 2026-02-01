@@ -2,6 +2,17 @@
     ViewData["Title"] = "VORTEX Renewables - Energía que impulsa el futuro";
 }
 
+@section Styles {
+    @* CSS específicos de la Landing Page *@
+    <link rel="stylesheet" href="~/css/components/hero.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/components/_about.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/components/_services.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/components/_values.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/components/_stats.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/components/_contact.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/pages/landing.css" asp-append-version="true" />
+}
+
 @* Incluir componentes de la landing *@
 <partial name="~/Views/Landing/Components/_Hero.cshtml" />
 <partial name="~/Views/Landing/Components/_About.cshtml" />
@@ -11,5 +22,7 @@
 <partial name="~/Views/Landing/Components/_Contact.cshtml" />
 
 @section Scripts {
+    @* Scripts específicos de la Landing Page *@
+    <script src="~/js/hero.js" asp-append-version="true"></script>
     <script src="~/js/navigation.js" asp-append-version="true"></script>
 }

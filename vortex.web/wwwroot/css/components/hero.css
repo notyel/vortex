@@ -119,16 +119,16 @@
 }
 
 .btn-hero-primary {
-    background-color: #2ecc71;
+    background-color: #0077B6;
     color: #ffffff;
-    border: 2px solid #2ecc71;
+    border: 2px solid #0077B6;
 }
 
 .btn-hero-primary:hover {
-    background-color: #27ae60;
-    border-color: #27ae60;
+    background-color: #005a8a;
+    border-color: #005a8a;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(46, 204, 113, 0.4);
+    box-shadow: 0 4px 12px rgba(0, 119, 182, 0.4);
 }
 
 .btn-hero-secondary {
@@ -170,7 +170,7 @@
 }
 
 .indicator.active {
-    background-color: #2ecc71;
+    background-color: #0077B6;
     border-color: #ffffff;
     transform: scale(1.2);
 }

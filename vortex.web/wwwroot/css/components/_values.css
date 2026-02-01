@@ -1,0 +1,38 @@
+/* Values Component Styles */
+
+.values {
+    background-color: var(--color-white);
+}
+
+.value-card {
+    text-align: center;
+    padding: var(--spacing-xl);
+}
+
+.value-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--color-corporate), var(--color-accent-primary));
+    border-radius: var(--border-radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-lg);
+    color: var(--color-white);
+}
+
+.value-icon .material-icons {
+    color: var(--color-white);
+}
+
+.value-title {
+    font-size: var(--font-size-xl);
+    color: var(--color-gray-900);
+    margin-bottom: var(--spacing-md);
+    font-weight: var(--font-weight-semibold);
+}
+
+.value-description {
+    color: var(--color-gray-600);
+    line-height: 1.8;
+}
