@@ -176,6 +176,12 @@
                 </div>
             </div>
         </div>
+        
+        <!-- Botón para volver a las pestañas (solo móvil) -->
+        <button class="back-to-tabs-btn" id="backToTabsBtn">
+            <span class="material-icons">arrow_upward</span>
+            <span class="btn-text">Ver otro servicio</span>
+        </button>
     </div>
 </section>
 
@@ -183,6 +189,7 @@
     document.addEventListener('DOMContentLoaded', function() {
         const tabs = document.querySelectorAll('.service-tab');
         const contents = document.querySelectorAll('.service-content');
+        const backToTabsBtn = document.getElementById('backToTabsBtn');
         
         tabs.forEach(tab => {
             tab.addEventListener('click', function() {
@@ -197,5 +204,18 @@
                 document.querySelector(`.service-content[data-service="${serviceId}"]`).classList.add('active');
             });
         });
+        
+        // Funcionalidad para el botón de volver a las pestañas
+        if (backToTabsBtn) {
+            backToTabsBtn.addEventListener('click', function() {
+                const tabsContainer = document.querySelector('.services-tabs');
+                if (tabsContainer) {
+                    tabsContainer.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'start' 
+                    });
+                }
+            });
+        }
     });
 </script>
