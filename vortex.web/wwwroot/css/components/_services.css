@@ -263,6 +263,97 @@
     display: none;
 }
 
+/* Header para las tarjetas de servicios */
+.services-cards-header {
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-lg);
+    text-align: left;
+}
+
+/* Reducir espacio solo para las tarjetas en Services */
+.services .feature-cards {
+    margin-top: 0;
+}
+
+/* Tarjeta de impacto con imagen de fondo */
+.impact-card {
+    width: 100%;
+    min-height: 400px;
+    margin-top: var(--spacing-2xl);
+    border-radius: var(--border-radius-lg);
+    background-image: url('/images/persona-sonriendo-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+.impact-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 119, 182, 0.9) 0%, rgba(0, 150, 136, 0.85) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-2xl);
+}
+
+.impact-card-content {
+    max-width: 800px;
+    text-align: center;
+    color: var(--color-white);
+}
+
+.impact-title {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-white);
+    margin: 0 0 var(--spacing-lg) 0;
+    line-height: 1.2;
+}
+
+.impact-description {
+    font-size: var(--font-size-lg);
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.95);
+    margin: 0 0 var(--spacing-xl) 0;
+}
+
+.impact-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md) var(--spacing-xl);
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    text-decoration: none;
+    border-radius: var(--border-radius-md);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-base);
+    transition: all var(--transition-base);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.impact-cta:hover {
+    background-color: var(--color-accent-primary);
+    color: var(--color-white);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.impact-cta .material-icons {
+    font-size: 20px;
+    transition: transform var(--transition-base);
+}
+
+.impact-cta:hover .material-icons {
+    transform: translateX(4px);
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
     .services-title {
@@ -419,3 +510,4 @@
         transform: translateY(0);
     }
 }
+
