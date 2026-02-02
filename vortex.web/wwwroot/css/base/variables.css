@@ -1,6 +1,17 @@
 /* Variables CSS - Paleta de colores y tokens de diseño */
 
 :root {
+    /* Colores Primarios y Secundarios */
+    --color-primary: #0077B6;
+    --color-primary-light: #00a7ff;
+    --color-primary-dark: #005a8c;
+    --color-primary-rgb: 0, 119, 182;
+    
+    --color-secondary: #0F9D58;
+    --color-secondary-light: #73BE44;
+    --color-secondary-dark: #0c7a45;
+    --color-secondary-rgb: 15, 157, 88;
+    
     /* Colores Corporativos */
     --color-corporate: #0077B6;
     --color-corporate-light: #00a7ff;

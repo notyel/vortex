@@ -2,80 +2,200 @@
 
 <section id="servicios" class="section services">
     <div class="container">
-        <h2 class="section-title">Nuestros Servicios</h2>
+        <div class="services-header">
+            <div class="services-label">
+                <span class="label-line"></span>
+                <span class="label-text">NUESTROS SERVICIOS</span>
+            </div>
+            <h2 class="services-title">
+                Soluciones integrales para impulsar la <span class="highlight">transición energética</span> de tu empresa.
+            </h2>
+        </div>
         
-        <div class="grid grid-cols-2">
-            <div class="service-card">
-                <div class="service-icon">
-                    <span class="material-icons icon-xl">bolt</span>
-                </div>
-                <h3 class="service-title">Desarrollo y estructuración de proyectos (Utility-Scale)</h3>
-                <p class="service-description">
-                    Soluciones integrales para proyectos de energía renovable a gran escala.
-                </p>
-                <ul class="service-list">
-                    <li>Identificación y aseguramiento de terrenos estratégicos</li>
-                    <li>Gestión de permisos ambientales, sociales y regulatorios</li>
-                    <li>Ingeniería conceptual, básica y de detalle</li>
-                    <li>Modelación financiera y estructuración de PPAs</li>
-                    <li>Acompañamiento hasta RTB (Ready-to-Build) y soporte hasta COD (Commercial Operation Date)</li>
-                    <li>Gestión de beneficios tributarios UPME</li>
-                    <li>Certificaciones RETIE</li>
-                </ul>
+        <div class="services-tabs-container">
+            <!-- Pestañas laterales -->
+            <div class="services-tabs">
+                <button class="service-tab active" data-service="utility-scale">
+                    <div class="tab-icon">
+                        <span class="material-icons">bolt</span>
+                    </div>
+                    <div class="tab-content">
+                        <h3 class="tab-title">Desarrollo y estructuración de proyectos</h3>
+                        <p class="tab-subtitle">Utility-Scale</p>
+                    </div>
+                </button>
+                
+                <button class="service-tab" data-service="due-diligence">
+                    <div class="tab-icon">
+                        <span class="material-icons">search</span>
+                    </div>
+                    <div class="tab-content">
+                        <h3 class="tab-title">Due Diligence Integral</h3>
+                        <p class="tab-subtitle">Proyectos Renovables</p>
+                    </div>
+                </button>
+                
+                <button class="service-tab" data-service="distribuida">
+                    <div class="tab-icon">
+                        <span class="material-icons">solar_power</span>
+                    </div>
+                    <div class="tab-content">
+                        <h3 class="tab-title">Generación distribuida</h3>
+                        <p class="tab-subtitle">Autogeneración</p>
+                    </div>
+                </button>
+                
+                <button class="service-tab" data-service="electromovilidad">
+                    <div class="tab-icon">
+                        <span class="material-icons">ev_station</span>
+                    </div>
+                    <div class="tab-content">
+                        <h3 class="tab-title">Soluciones de electromovilidad</h3>
+                        <p class="tab-subtitle">Infraestructura EV</p>
+                    </div>
+                </button>
             </div>
             
-            <div class="service-card">
-                <div class="service-icon">
-                    <span class="material-icons icon-xl">search</span>
+            <!-- Contenido de servicios -->
+            <div class="services-content">
+                <div class="service-content active" data-service="utility-scale">
+                    <h3 class="service-content-title">Desarrollo y estructuración de proyectos (Utility-Scale)</h3>
+                    <p class="service-description">
+                        Soluciones integrales para proyectos de energía renovable a gran escala.
+                    </p>
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <span class="material-icons">location_on</span>
+                            <span>Identificación y aseguramiento de terrenos estratégicos</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="material-icons">gavel</span>
+                            <span>Gestión de permisos ambientales, sociales y regulatorios</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="material-icons">engineering</span>
+                            <span>Ingeniería conceptual, básica y de detalle</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="material-icons">analytics</span>
+                            <span>Modelación financiera y estructuración de PPAs</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="material-icons">trending_up</span>
+                            <span>Acompañamiento hasta RTB (Ready-to-Build) y soporte hasta COD (Commercial Operation Date)</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="material-icons">account_balance</span>
+                            <span>Gestión de beneficios tributarios UPME</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="material-icons">verified</span>
+                            <span>Certificaciones RETIE</span>
+                        </div>
+                    </div>
                 </div>
-                <h3 class="service-title">Due Diligence Integral para Proyectos Renovables</h3>
-                <p class="service-description">
-                    <strong>Enfoque:</strong> Confianza, claridad y respaldo para sus decisiones de inversión.
-                </p>
-                <p class="service-description">
-                    Evaluación rigurosa, multidisciplinaria y en terreno para identificar riesgos, 
-                    garantizar la bancabilidad y facilitar el desarrollo o adquisición. Brinda una visión completa: 
-                    técnica, legal, financiera, ambiental y social.
-                </p>
-                <ul class="service-list">
-                    <li>Due Diligence Técnica</li>
-                    <li>Due Diligence Financiera</li>
-                    <li>Due Diligence Ambiental y Social (E&S)</li>
-                    <li>Scouting y Verificación en Campo</li>
-                </ul>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-icon">
-                    <span class="material-icons icon-xl">solar_power</span>
+                
+                <div class="service-content" data-service="due-diligence">
+                    <h3 class="service-content-title">Due Diligence Integral para Proyectos Renovables</h3>
+                    <p class="service-description">
+                        <strong>Enfoque:</strong> Confianza, claridad y respaldo para sus decisiones de inversión.
+                    </p>
+                    <p class="service-description">
+                        Evaluación rigurosa, multidisciplinaria y en terreno para identificar riesgos, 
+                        garantizar la bancabilidad y facilitar el desarrollo o adquisición. Brinda una visión completa: 
+                        técnica, legal, financiera, ambiental y social.
+                    </p>
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <span class="material-icons">build</span>
+                            <span>Due Diligence Técnica</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="material-icons">payments</span>
+                            <span>Due Diligence Financiera</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="material-icons">nature</span>
+                            <span>Due Diligence Ambiental y Social (E&S)</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="material-icons">explore</span>
+                            <span>Scouting y Verificación en Campo</span>
+                        </div>
+                    </div>
                 </div>
-                <h3 class="service-title">Generación distribuida y autogeneración</h3>
-                <p class="service-description">
-                    Sistemas de energía solar y almacenamiento para diferentes sectores.
-                </p>
-                <ul class="service-list">
-                    <li>Sistemas solares fotovoltaicos residenciales, comerciales e industriales</li>
-                    <li>Sistemas híbridos con almacenamiento en baterías</li>
-                    <li>Optimización de autoconsumo y contratos PPA on-site</li>
-                    <li>Servicios de operación, monitoreo y mantenimiento 24/7</li>
-                </ul>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-icon">
-                    <span class="material-icons icon-xl">ev_station</span>
+                
+                <div class="service-content" data-service="distribuida">
+                    <h3 class="service-content-title">Generación distribuida y autogeneración</h3>
+                    <p class="service-description">
+                        Sistemas de energía solar y almacenamiento para diferentes sectores.
+                    </p>
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <span class="material-icons">wb_sunny</span>
+                            <span>Sistemas solares fotovoltaicos residenciales, comerciales e industriales</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="material-icons">battery_charging_full</span>
+                            <span>Sistemas híbridos con almacenamiento en baterías</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="material-icons">settings_suggest</span>
+                            <span>Optimización de autoconsumo y contratos PPA on-site</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="material-icons">support_agent</span>
+                            <span>Servicios de operación, monitoreo y mantenimiento 24/7</span>
+                        </div>
+                    </div>
                 </div>
-                <h3 class="service-title">Soluciones de electromovilidad</h3>
-                <p class="service-description">
-                    Infraestructura completa para vehículos eléctricos.
-                </p>
-                <ul class="service-list">
-                    <li>Diseño e instalación de electrolineras públicas y privadas</li>
-                    <li>Integración de cargadores inteligentes Nivel 2 y DC Fast</li>
-                    <li>Conversión y renovación de flotas corporativas a vehículos eléctricos</li>
-                    <li>Operación y mantenimiento de infraestructura de carga</li>
-                </ul>
+                
+                <div class="service-content" data-service="electromovilidad">
+                    <h3 class="service-content-title">Soluciones de electromovilidad</h3>
+                    <p class="service-description">
+                        Infraestructura completa para vehículos eléctricos.
+                    </p>
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <span class="material-icons">power</span>
+                            <span>Diseño e instalación de electrolineras públicas y privadas</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="material-icons">electrical_services</span>
+                            <span>Integración de cargadores inteligentes Nivel 2 y DC Fast</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="material-icons">electric_car</span>
+                            <span>Conversión y renovación de flotas corporativas a vehículos eléctricos</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="material-icons">handyman</span>
+                            <span>Operación y mantenimiento de infraestructura de carga</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const tabs = document.querySelectorAll('.service-tab');
+        const contents = document.querySelectorAll('.service-content');
+        
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                const serviceId = this.getAttribute('data-service');
+                
+                // Remover active de todas las pestañas y contenidos
+                tabs.forEach(t => t.classList.remove('active'));
+                contents.forEach(c => c.classList.remove('active'));
+                
+                // Agregar active a la pestaña clickeada y su contenido
+                this.classList.add('active');
+                document.querySelector(`.service-content[data-service="${serviceId}"]`).classList.add('active');
+            });
+        });
+    });
+</script>
