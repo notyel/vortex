@@ -1,0 +1,107 @@
+/* Why Choose Us Component Styles */
+
+.why-choose-us {
+    background-color: var(--color-white);
+}
+
+/* Header para las tarjetas de servicios */
+.services-cards-header {
+    margin-bottom: var(--spacing-lg);
+    text-align: left;
+}
+
+/* Reducir espacio solo para las tarjetas en Services */
+.why-choose-us .feature-cards {
+    margin-top: 0;
+}
+
+/* Tarjeta de impacto con imagen de fondo */
+.impact-card {
+    width: 100%;
+    min-height: 400px;
+    margin-top: var(--spacing-lg);
+    border-radius: var(--border-radius-md);
+    background-image: url('/images/persona-sonriendo-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+}
+
+.impact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+.impact-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.95), transparent);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: var(--spacing-2xl);
+}
+
+.impact-card-content {
+    max-width: 450px;
+    text-align: left;
+    color: var(--color-white);
+}
+
+.impact-title {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-white);
+    margin: 0 0 var(--spacing-md) 0;
+    line-height: 1.2;
+}
+
+.impact-title .highlight {
+    color: var(--color-primary-light);
+}
+
+.impact-description {
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    color: var(--color-white);
+    margin: 0;
+}
+
+.impact-description strong {
+    font-weight: var(--font-weight-bold);
+    color: var(--color-white);
+}
+
+/* Impact card responsive */
+@media (max-width: 767px) {
+    .impact-card {
+        min-height: 350px;
+    }
+
+    .impact-card-overlay {
+        padding: var(--spacing-lg);
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.7) 60%, rgba(0, 0, 0, 0.3) 100%);
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .impact-card-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .impact-title {
+        font-size: var(--font-size-xl);
+    }
+
+    .impact-description {
+        font-size: var(--font-size-sm);
+    }
+}
