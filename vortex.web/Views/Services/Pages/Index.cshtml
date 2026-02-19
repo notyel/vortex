@@ -5,6 +5,7 @@
 @section Styles {
     <link rel="stylesheet" href="~/css/components/_page-hero.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/components/_services.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/components/_service-cards.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/pages/services.css" asp-append-version="true" />
 }
 
@@ -20,6 +21,13 @@
 
 
 
+
+@* Tarjetas destacadas de servicios *@
+<section class="section services">
+    <div class="container">
+        <partial name="~/Views/Shared/Components/_ServiceCards.cshtml" />
+    </div>
+</section>
 
 @* Componente de servicios reutilizado de la landing *@
 <partial name="~/Views/Landing/Components/_Services.cshtml" />
