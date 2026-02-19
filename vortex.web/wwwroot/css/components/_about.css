@@ -19,7 +19,7 @@
 .about-image-wrapper {
     position: relative;
     border-radius: var(--border-radius-lg);
-    overflow: visible;
+    overflow: hidden;
 }
 
 .about-image {
@@ -30,33 +30,32 @@
     display: block;
 }
 
-/* Badge Styles */
-.about-badge {
+/* Image Caption Gradient */
+.about-image-caption {
     position: absolute;
-    bottom: -30px;
-    left: 30px;
-    background: linear-gradient(135deg, var(--color-corporate), var(--color-corporate-light));
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0.45) 55%, transparent 100%);
+    padding: var(--spacing-2xl) var(--spacing-lg) var(--spacing-lg);
     color: var(--color-white);
-    padding: var(--spacing-lg) var(--spacing-xl);
-    border-radius: var(--border-radius-lg);
-    box-shadow: var(--shadow-xl);
-    text-align: center;
-    min-width: 180px;
 }
 
-.badge-number {
-    font-size: var(--font-size-5xl);
-    font-weight: var(--font-weight-bold);
-    line-height: 1;
-    margin-bottom: var(--spacing-xs);
-}
-
-.badge-text {
+.caption-subtitle {
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-medium);
-    line-height: 1.4;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 1.5px;
+    color: #6ee7a0;
+    margin: 0 0 var(--spacing-xs) 0;
+}
+
+.caption-title {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-white);
+    line-height: 1.3;
+    margin: 0;
 }
 
 /* Text Container */
@@ -237,30 +236,9 @@
     .about-content {
         gap: var(--spacing-3xl);
     }
-    
-    .about-badge {
-        bottom: -40px;
-        left: 40px;
-        padding: var(--spacing-xl) var(--spacing-2xl);
-        min-width: 200px;
-    }
-    
-    .badge-number {
-        font-size: var(--font-size-6xl);
-    }
-    
-    .badge-text {
-        font-size: var(--font-size-base);
-    }
 }
 
 @media (max-width: 767px) {
-    .about-badge {
-        position: static;
-        margin-top: var(--spacing-lg);
-        width: fit-content;
-    }
-
     .about-title {
         font-size: var(--font-size-2xl);
     }
