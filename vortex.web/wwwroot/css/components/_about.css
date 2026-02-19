@@ -63,13 +63,13 @@
 .about-text-container {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-lg);
+    gap: var(--spacing-sm);
 }
 
 .about-header {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-md);
+    gap: var(--spacing-xs);
 }
 
 .about-label {
@@ -116,52 +116,73 @@
     margin: 0;
 }
 
-/* Features */
-.about-features {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-lg);
-    margin-top: var(--spacing-md);
+.about-services-intro {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-gray-800);
+    line-height: 1.6;
+    margin: 0;
+    padding-left: var(--spacing-md);
+    border-left: 3px solid var(--color-accent-primary);
 }
 
-.feature-item {
+/* Features */
+.about-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-sm);
+    margin-top: 0;
+}
+
+.about-features .feature-item {
     display: flex;
-    gap: var(--spacing-md);
+    gap: var(--spacing-sm);
     align-items: flex-start;
 }
 
-.feature-icon {
+.about-features .feature-icon {
     flex-shrink: 0;
-    width: 60px;
-    height: 60px;
+    width: 56px;
+    height: 56px;
     background-color: rgba(var(--color-accent-primary-rgb), 0.1);
     border-radius: var(--border-radius-md);
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--color-accent-primary);
+    flex-shrink: 0;
 }
 
-.feature-icon svg {
-    width: 30px;
-    height: 30px;
+.about-features .feature-icon svg {
+    width: 26px;
+    height: 26px;
 }
 
-.feature-content {
+.about-features .feature-icon .material-symbols-outlined {
+    display: block;
+    font-size: 26px;
+    line-height: 1;
+    min-width: unset;
+    min-height: unset;
+    color: var(--color-accent-primary);
+}
+
+.about-features .feature-content {
     flex: 1;
 }
 
-.feature-title {
-    font-size: var(--font-size-xl);
+.about-features .feature-title {
+    font-size: var(--font-size-base);
     color: var(--color-gray-900);
     font-weight: var(--font-weight-semibold);
-    margin: 0 0 var(--spacing-xs) 0;
+    margin: 0 0 2px 0;
+    line-height: 1.3;
 }
 
-.feature-description {
-    font-size: var(--font-size-base);
-    color: var(--color-gray-600);
-    line-height: 1.6;
+.about-features .feature-description {
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-500);
+    line-height: 1.4;
     margin: 0;
 }
 
@@ -239,8 +260,12 @@
         margin-top: var(--spacing-lg);
         width: fit-content;
     }
-    
+
     .about-title {
         font-size: var(--font-size-2xl);
+    }
+
+    .about-features {
+        grid-template-columns: 1fr;
     }
 }
