@@ -1,0 +1,119 @@
+@* Hero Video - Sección principal con fondo de video *@
+
+<div class="hero-video-wrapper">
+    <section class="hero-video-section">
+        @* Video de fondo *@
+        <div class="hero-video-bg">
+            <video id="hero-bg-video" muted loop playsinline preload="none" poster="/images/hero-bg-placeholder.jpg">
+                <source data-src="/video/hero-bg-video.mp4" type="video/mp4" />
+            </video>
+        </div>
+
+        <div class="hero-video-overlay"></div>
+
+        <div class="hero-video-content container">
+            <div class="hero-video-inner">
+                <p class="hero-pretitle text-primary">Desarrollo <span class="material-symbols-outlined hero-pretitle-sep">fiber_manual_record</span> Estructuración <span class="material-symbols-outlined hero-pretitle-sep">fiber_manual_record</span> Ingeniería</p>
+                <h1 class="hero-title">
+                    Proyectos de <span class="text-primary">Energía Renovable</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Somos una empresa especializada en el desarrollo, ingeniería y estructuración integral de proyectos solares y de energía renovable, impulsando la transición energética sostenible para empresas e industrias.
+                </p>
+            </div>
+        </div>
+
+        @* Feature Cards - DESKTOP ONLY *@
+        <div class="hero-features hero-features-desktop">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="material-symbols-outlined">solar_power</span>
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Proyectos Solares</h3>
+                        <p class="feature-description">Desarrollo y estructuración integral de proyectos de energía solar, desde la ingeniería hasta la puesta en marcha.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="material-symbols-outlined">support_agent</span>
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Soporte 24/7</h3>
+                        <p class="feature-description">Asistencia técnica continua para garantizar el óptimo funcionamiento de tu sistema solar.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="material-symbols-outlined">workspace_premium</span>
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Expertos Certificados</h3>
+                        <p class="feature-description">Equipo profesional con amplia experiencia en instalación y mantenimiento de sistemas solares.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+@* Feature Cards - MOBILE ONLY *@
+<section class="hero-features hero-features-mobile">
+    <div class="container">
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <span class="material-symbols-outlined">solar_power</span>
+                </div>
+                <div class="feature-content">
+                    <h3 class="feature-title">Proyectos Solares</h3>
+                    <p class="feature-description">Desarrollo y estructuración integral de proyectos de energía solar, desde la ingeniería hasta la puesta en marcha.</p>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <span class="material-symbols-outlined">support_agent</span>
+                </div>
+                <div class="feature-content">
+                    <h3 class="feature-title">Soporte 24/7</h3>
+                    <p class="feature-description">Asistencia técnica continua para garantizar el óptimo funcionamiento de tu sistema solar.</p>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <span class="material-symbols-outlined">workspace_premium</span>
+                </div>
+                <div class="feature-content">
+                    <h3 class="feature-title">Expertos Certificados</h3>
+                    <p class="feature-description">Equipo profesional con amplia experiencia en instalación y mantenimiento de sistemas solares.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    (function () {
+        var video = document.getElementById('hero-bg-video');
+        if (!video) return;
+        function loadVideo() {
+            var source = video.querySelector('source[data-src]');
+            if (source) {
+                source.src = source.getAttribute('data-src');
+                source.removeAttribute('data-src');
+            }
+            video.load();
+            video.play().catch(function () {});
+        }
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(loadVideo);
+        } else {
+            window.addEventListener('load', loadVideo);
+        }
+    })();
+</script>
