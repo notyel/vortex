@@ -1,0 +1,73 @@
+@* CTA de Servicios - Componente de llamada a la acción *@
+
+<section class="services-cta" aria-labelledby="services-cta-title">
+
+    @* Partículas decorativas *@
+    <div class="services-cta-particles" aria-hidden="true">
+        <span class="services-cta-particle services-cta-particle--1"></span>
+        <span class="services-cta-particle services-cta-particle--2"></span>
+        <span class="services-cta-particle services-cta-particle--3"></span>
+        <span class="services-cta-particle services-cta-particle--4"></span>
+    </div>
+
+    <div class="container">
+        <div class="services-cta-inner">
+
+            @* Ícono central decorativo *@
+            <div class="services-cta-icon-wrap" aria-hidden="true">
+                <img src="~/images/isotipo-white.png" alt="" class="services-cta-icon" />
+            </div>
+
+            @* Etiqueta superior *@
+            <div class="services-cta-label" aria-hidden="true">
+                <span class="services-cta-label-line"></span>
+                <span class="services-cta-label-text">Da el siguiente paso</span>
+                <span class="services-cta-label-line"></span>
+            </div>
+
+            @* Título *@
+            <h2 id="services-cta-title" class="services-cta-title">
+                ¿Listo para impulsar tu
+                <span class="services-cta-title-highlight">proyecto energético?</span>
+            </h2>
+
+            @* Descripción *@
+            <p class="services-cta-description">
+                Contáctanos y uno de nuestros especialistas evaluará tus necesidades
+                y te presentará la solución más adecuada para tu empresa.
+            </p>
+
+            @* Stats destacados *@
+            <div class="services-cta-stats" aria-label="Cifras clave">
+                <div class="services-cta-stat">
+                    <strong class="services-cta-stat-value">+100</strong>
+                    <span class="services-cta-stat-label">Proyectos evaluados</span>
+                </div>
+                <div class="services-cta-stat-divider" aria-hidden="true"></div>
+                <div class="services-cta-stat">
+                    <strong class="services-cta-stat-value">4</strong>
+                    <span class="services-cta-stat-label">Servicios especializados</span>
+                </div>
+                <div class="services-cta-stat-divider" aria-hidden="true"></div>
+                <div class="services-cta-stat">
+                    <strong class="services-cta-stat-value">100%</strong>
+                    <span class="services-cta-stat-label">Compromiso con el cliente</span>
+                </div>
+            </div>
+
+            @* Acciones *@
+            <div class="services-cta-actions">
+                <a asp-controller="Contact" asp-action="Index" class="btn services-cta-btn-primary">
+                    <span class="material-icons" aria-hidden="true">contact_mail</span>
+                    Hablar con un especialista
+                </a>
+                <a href="/" class="btn services-cta-btn-ghost">
+                    <span class="material-icons" aria-hidden="true">arrow_back</span>
+                    Volver al inicio
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+</section>

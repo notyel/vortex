@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="~/css/components/_page-hero.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/pages/service-detail.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/components/_faq.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/components/_services-cta.css" asp-append-version="true" />
 }
 
 <partial name="~/Views/Shared/Components/_PageHero.cshtml" model='@(new PageHeroViewModel
@@ -22,7 +23,7 @@
 <section class="service-detail-layout">
     <div class="container">
 
-        <partial name="~/Views/Shared/Components/_ServicesMenu.cshtml" />
+        <partial name="~/Views/Services/Components/_ServicesMenu.cshtml" />
 
         <main class="service-main-content">
             <img src="~/images/slider-2.jpg"
@@ -125,6 +126,9 @@
 
     </div>
 </section>
+
+@* CTA *@
+<partial name="~/Views/Services/Components/_ServicesCta.cshtml" />
 
 @section Scripts {
     <script src="~/js/service-faq.js" asp-append-version="true"></script>

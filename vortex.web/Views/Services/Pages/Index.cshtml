@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="~/css/components/_page-hero.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/components/_services.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/components/_service-cards.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/components/_services-cta.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/pages/services.css" asp-append-version="true" />
 }
 
@@ -29,20 +30,5 @@
     </div>
 </section>
 
-@* Componente de servicios reutilizado de la landing *@
-<partial name="~/Views/Landing/Components/_Services.cshtml" />
-
 @* CTA final *@
-<section class="services-cta">
-    <div class="container">
-        <h2 class="services-cta-title">¿Listo para impulsar tu proyecto energético?</h2>
-        <p class="services-cta-description">
-            Contáctanos y uno de nuestros especialistas evaluará tus necesidades
-            y te presentará la solución más adecuada.
-        </p>
-        <div class="services-cta-actions">
-            <a href="/#contacto" class="btn btn-primary">Hablar con un especialista</a>
-            <a href="/" class="btn btn-outline">Volver al inicio</a>
-        </div>
-    </div>
-</section>
+<partial name="~/Views/Services/Components/_ServicesCta.cshtml" />

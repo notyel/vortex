@@ -88,38 +88,7 @@
     color: rgba(255, 255, 255, 0.4);
 }
 
-/* Services CTA */
-.services-cta {
-    background: linear-gradient(135deg, var(--color-gray-50), var(--color-white));
-    padding: var(--spacing-3xl) 0;
-    border-top: 1px solid var(--color-gray-100);
-}
-
-.services-cta .container {
-    text-align: center;
-}
-
-.services-cta-title {
-    font-size: var(--font-size-2xl);
-    font-weight: var(--font-weight-bold);
-    color: var(--color-gray-900);
-    margin-bottom: var(--spacing-md);
-}
-
-.services-cta-description {
-    font-size: var(--font-size-base);
-    color: var(--color-gray-600);
-    max-width: 520px;
-    margin: 0 auto var(--spacing-xl);
-    line-height: 1.7;
-}
-
-.services-cta-actions {
-    display: flex;
-    justify-content: center;
-    gap: var(--spacing-md);
-    flex-wrap: wrap;
-}
+/* Services CTA → movido a css/components/_services-cta.css */
 
 @media (min-width: 768px) {
     .services-page-hero .page-title {

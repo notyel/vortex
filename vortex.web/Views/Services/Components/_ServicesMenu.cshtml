@@ -12,28 +12,28 @@
             <li>
                 <a asp-controller="Services" asp-action="UtilityScale"
                    class="services-menu-link @(currentAction == "UtilityScale" ? "active" : "")">
-                    <span class="material-icons" aria-hidden="true">check</span>
+                    <span class="material-icons" aria-hidden="true">@(currentAction == "UtilityScale" ? "check_circle" : "radio_button_unchecked")</span>
                     Desarrollo de Proyectos
                 </a>
             </li>
             <li>
                 <a asp-controller="Services" asp-action="DueDiligence"
                    class="services-menu-link @(currentAction == "DueDiligence" ? "active" : "")">
-                    <span class="material-icons" aria-hidden="true">check</span>
+                    <span class="material-icons" aria-hidden="true">@(currentAction == "DueDiligence" ? "check_circle" : "radio_button_unchecked")</span>
                     Due Diligence Integral
                 </a>
             </li>
             <li>
                 <a asp-controller="Services" asp-action="Distribuida"
                    class="services-menu-link @(currentAction == "Distribuida" ? "active" : "")">
-                    <span class="material-icons" aria-hidden="true">check</span>
+                    <span class="material-icons" aria-hidden="true">@(currentAction == "Distribuida" ? "check_circle" : "radio_button_unchecked")</span>
                     Generación Distribuida
                 </a>
             </li>
             <li>
                 <a asp-controller="Services" asp-action="Electromovilidad"
                    class="services-menu-link @(currentAction == "Electromovilidad" ? "active" : "")">
-                    <span class="material-icons" aria-hidden="true">check</span>
+                    <span class="material-icons" aria-hidden="true">@(currentAction == "Electromovilidad" ? "check_circle" : "radio_button_unchecked")</span>
                     Electromovilidad
                 </a>
             </li>
@@ -42,13 +42,18 @@
 
     @* Descarga de brochure *@
     <div class="brochure-widget">
+        <div class="brochure-widget-promo">
+            <span class="material-icons brochure-widget-promo-icon" aria-hidden="true">picture_as_pdf</span>
+            <div>
+                <strong class="brochure-widget-promo-title">Brochure Corporativo 2025</strong>
+                <p class="brochure-widget-text">
+                    Todo nuestro portafolio de soluciones energéticas en un solo documento.
+                </p>
+            </div>
+        </div>
         <a href="/docs/BROCHURE-VORTEX-RE-2025.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
             <span class="material-icons" aria-hidden="true">download</span>
             Descargar Brochure
-        </a>
-        <a href="/docs/BROCHURE-VORTEX-RE-2025.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-            <span class="material-icons" aria-hidden="true">picture_as_pdf</span>
-            Ver Brochure PDF
         </a>
     </div>
 
@@ -58,9 +63,15 @@
             <img src="~/images/logo-vertical-white.png" alt="VORTEX Renewables" class="contact-widget-logo-img" />
         </div>
         <h4 class="contact-widget-headline">¿Necesitas ayuda?</h4>
-        <p class="contact-widget-cta">Llamanos</p>
-        <p class="contact-widget-phone">+57 300 4912788</p>
-        <a asp-controller="Contact" asp-action="Index" class="btn btn-secondary">Contáctanos</a>
+        <p class="contact-widget-cta">Llámanos</p>
+        <p class="contact-widget-phone">
+            <span class="material-icons" aria-hidden="true">call</span>
+            +57 300 4912788
+        </p>
+        <a asp-controller="Contact" asp-action="Index" class="btn btn-secondary">
+            <span class="material-icons" aria-hidden="true">contact_mail</span>
+            Contáctanos
+        </a>
     </div>
 
 </aside>

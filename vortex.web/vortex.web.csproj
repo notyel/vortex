@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Views\AboutUs\Components\" />
-    <Folder Include="Views\Services\Components\" />
     <Folder Include="wwwroot\video\" />
   </ItemGroup>
 
