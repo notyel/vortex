@@ -1,0 +1,170 @@
+@{
+    ViewData["Title"] = "Generación Distribuida y Autogeneración - VORTEX Renewables";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/components/_page-hero.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/pages/service-detail.css" asp-append-version="true" />
+}
+
+<partial name="~/Views/Shared/Components/_PageHero.cshtml" model='@(new PageHeroViewModel
+{
+    Title = "Generación Distribuida",
+    Breadcrumbs =
+    [
+        new BreadcrumbItem { Label = "Inicio", Url = "/" },
+        new BreadcrumbItem { Label = "Servicios", Url = "/Services" },
+        new BreadcrumbItem { Label = "Generación Distribuida" }
+    ]
+})' />
+
+<section class="service-detail-layout">
+    <div class="container">
+
+        <partial name="~/Views/Shared/Components/_ServicesMenu.cshtml" />
+
+        <main class="service-main-content">
+            <img src="~/images/slider-3.jpg"
+                 alt="Sistemas de generación distribuida y autogeneración solar"
+                 class="service-main-image" />
+
+            <div class="service-main-body">
+                <h2 class="service-main-title">
+                    Generación Distribuida y Autogeneración
+                </h2>
+                <p class="service-main-description">
+                    Diseñamos e implementamos sistemas de energía solar y almacenamiento adaptados a
+                    las necesidades de empresas, industrias y comercios que buscan reducir su factura
+                    energética, aumentar su resiliencia y avanzar hacia la sostenibilidad.
+                </p>
+                <p class="service-main-description">
+                    Desde la auditoría energética inicial hasta la puesta en marcha y el monitoreo
+                    continuo, acompañamos a nuestros clientes en cada paso para garantizar el máximo
+                    rendimiento de su inversión.
+                </p>
+
+                @* Mini tarjetas destacadas *@
+                <div class="service-highlights">
+                    <div class="service-highlight-card">
+                        <img src="~/images/energia-limpia.jpg" alt="Sistemas fotovoltaicos" />
+                        <div class="service-highlight-card-content">
+                            <h4>Solar Fotovoltaico</h4>
+                            <p>Instalaciones on-grid y off-grid para todos los segmentos.</p>
+                        </div>
+                    </div>
+                    <div class="service-highlight-card">
+                        <img src="~/images/transicion-a-energias-limpias.jpg" alt="Almacenamiento en baterías" />
+                        <div class="service-highlight-card-content">
+                            <h4>Almacenamiento BESS</h4>
+                            <p>Sistemas híbridos con baterías para máxima autonomía energética.</p>
+                        </div>
+                    </div>
+                </div>
+
+                @* Lista de características + bloque de valor *@
+                <div class="service-features-row">
+                    <div class="service-features-columns">
+                        <div class="service-feature-check">
+                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            Sistemas solares fotovoltaicos residenciales
+                        </div>
+                        <div class="service-feature-check">
+                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            Optimización de autoconsumo
+                        </div>
+                        <div class="service-feature-check">
+                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            Sistemas solares comerciales e industriales
+                        </div>
+                        <div class="service-feature-check">
+                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            Contratos PPA on-site
+                        </div>
+                        <div class="service-feature-check">
+                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            Sistemas híbridos con almacenamiento en baterías
+                        </div>
+                        <div class="service-feature-check">
+                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            Monitoreo y mantenimiento 24/7
+                        </div>
+                        <div class="service-feature-check">
+                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            Auditorías energéticas previas
+                        </div>
+                        <div class="service-feature-check">
+                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            Gestión de trámites de conexión a la red
+                        </div>
+                    </div>
+                    <div class="service-value-block">
+                        <p class="service-value-block-label">Nuestra fortaleza</p>
+                        <h3 class="service-value-block-title">Energía limpia que reduce tu factura desde el día uno</h3>
+                    </div>
+                </div>
+
+                @* FAQ *@
+                <div class="service-faq">
+                    <h3 class="service-faq-title">Preguntas Frecuentes</h3>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            ¿Qué es la generación distribuida?
+                            <span class="faq-icon"><span class="material-icons">add</span></span>
+                        </button>
+                        <div class="faq-answer">
+                            Es la producción de energía eléctrica en el mismo lugar o cerca del punto
+                            de consumo, generalmente a través de sistemas solares fotovoltaicos. Permite
+                            al usuario reducir su dependencia de la red eléctrica y aprovechar beneficios
+                            regulatorios como la Ley 1715.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            ¿Cuánto puedo ahorrar en mi factura energética?
+                            <span class="faq-icon"><span class="material-icons">add</span></span>
+                        </button>
+                        <div class="faq-answer">
+                            Dependiendo del tamaño del sistema, la irradiación solar del lugar y el
+                            perfil de consumo, los ahorros pueden oscilar entre el 40% y el 90% de la
+                            factura energética mensual. Realizamos una auditoría gratuita para estimar
+                            el ahorro real de tu instalación.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            ¿En cuánto tiempo se recupera la inversión?
+                            <span class="faq-icon"><span class="material-icons">add</span></span>
+                        </button>
+                        <div class="faq-answer">
+                            El período de retorno de inversión (payback) típico en Colombia es de
+                            4 a 7 años para sistemas industriales y comerciales, con una vida útil
+                            de los paneles superior a 25 años. Los beneficios tributarios de la Ley
+                            1715 pueden reducir este período significativamente.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            ¿Puedo vender el excedente de energía a la red?
+                            <span class="faq-icon"><span class="material-icons">add</span></span>
+                        </button>
+                        <div class="faq-answer">
+                            Sí. La regulación colombiana (CREG 030 de 2018 y sus actualizaciones)
+                            permite a los autogeneradores de pequeña escala inyectar excedentes a la
+                            red y recibir una compensación económica. VORTEX te ayuda a tramitar el
+                            proceso ante el operador de red.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+</section>
+
+@section Scripts {
+    <script src="~/js/service-faq.js" asp-append-version="true"></script>
+}

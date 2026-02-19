@@ -1,0 +1,171 @@
+@{
+    ViewData["Title"] = "Due Diligence Integral - VORTEX Renewables";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/components/_page-hero.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/pages/service-detail.css" asp-append-version="true" />
+}
+
+<partial name="~/Views/Shared/Components/_PageHero.cshtml" model='@(new PageHeroViewModel
+{
+    Title = "Due Diligence Integral",
+    Breadcrumbs =
+    [
+        new BreadcrumbItem { Label = "Inicio", Url = "/" },
+        new BreadcrumbItem { Label = "Servicios", Url = "/Services" },
+        new BreadcrumbItem { Label = "Due Diligence Integral" }
+    ]
+})' />
+
+<section class="service-detail-layout">
+    <div class="container">
+
+        <partial name="~/Views/Shared/Components/_ServicesMenu.cshtml" />
+
+        <main class="service-main-content">
+            <img src="~/images/slider-2.jpg"
+                 alt="Due Diligence integral para proyectos de energía renovable"
+                 class="service-main-image" />
+
+            <div class="service-main-body">
+                <h2 class="service-main-title">
+                    Due Diligence Integral para Proyectos Renovables
+                </h2>
+                <p class="service-main-description">
+                    <strong>Confianza, claridad y respaldo para sus decisiones de inversión.</strong>
+                </p>
+                <p class="service-main-description">
+                    Realizamos una evaluación rigurosa, multidisciplinaria y en terreno para identificar
+                    riesgos, garantizar la bancabilidad y facilitar el desarrollo o adquisición de proyectos
+                    renovables. Brindamos una visión completa: técnica, legal, financiera, ambiental y social,
+                    con la profundidad que cada proceso requiere.
+                </p>
+                <p class="service-main-description">
+                    Nuestros informes están diseñados para satisfacer los estándares de bancos de desarrollo,
+                    fondos de inversión y compradores estratégicos, reduciendo la incertidumbre y acelerando
+                    el cierre de transacciones.
+                </p>
+
+                @* Mini tarjetas destacadas *@
+                <div class="service-highlights">
+                    <div class="service-highlight-card">
+                        <img src="~/images/slider-1.jpg" alt="Due Diligence técnico" />
+                        <div class="service-highlight-card-content">
+                            <h4>Revisión Técnica</h4>
+                            <p>Evaluación de ingeniería, equipos, contratos EPC y desempeño productivo.</p>
+                        </div>
+                    </div>
+                    <div class="service-highlight-card">
+                        <img src="~/images/transicion-a-energias-limpias.jpg" alt="Due Diligence ambiental y social" />
+                        <div class="service-highlight-card-content">
+                            <h4>Análisis E&S</h4>
+                            <p>Verificación de cumplimiento ambiental, social y de comunidades.</p>
+                        </div>
+                    </div>
+                </div>
+
+                @* Lista de características + bloque de valor *@
+                <div class="service-features-row">
+                    <div class="service-features-columns">
+                        <div class="service-feature-check">
+                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            Due Diligence Técnica
+                        </div>
+                        <div class="service-feature-check">
+                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            Due Diligence Ambiental y Social (E&S)
+                        </div>
+                        <div class="service-feature-check">
+                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            Due Diligence Financiera
+                        </div>
+                        <div class="service-feature-check">
+                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            Scouting y verificación en campo
+                        </div>
+                        <div class="service-feature-check">
+                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            Revisión de contratos y estructura legal
+                        </div>
+                        <div class="service-feature-check">
+                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            Modelación financiera independiente
+                        </div>
+                        <div class="service-feature-check">
+                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            Evaluación de permisos y licencias
+                        </div>
+                        <div class="service-feature-check">
+                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            Informes bancables para financiadores
+                        </div>
+                    </div>
+                    <div class="service-value-block">
+                        <p class="service-value-block-label">Nuestra fortaleza</p>
+                        <h3 class="service-value-block-title">Decisiones de inversión con respaldo sólido</h3>
+                    </div>
+                </div>
+
+                @* FAQ *@
+                <div class="service-faq">
+                    <h3 class="service-faq-title">Preguntas Frecuentes</h3>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            ¿En qué etapa del proyecto se realiza el Due Diligence?
+                            <span class="faq-icon"><span class="material-icons">add</span></span>
+                        </button>
+                        <div class="faq-answer">
+                            Puede realizarse en distintas etapas: antes de adquirir un proyecto (M&A),
+                            previo al cierre financiero con bancos o fondos, o como auditoría técnica
+                            durante la construcción y puesta en marcha.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            ¿Qué diferencia al Due Diligence de VORTEX?
+                            <span class="faq-icon"><span class="material-icons">add</span></span>
+                        </button>
+                        <div class="faq-answer">
+                            Combinamos experiencia técnica en campo con conocimiento financiero y legal
+                            del mercado energético colombiano y latinoamericano. Nuestros reportes son
+                            reconocidos por instituciones financieras internacionales como sólidos y
+                            objetivos.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            ¿Trabajan con fondos de inversión y bancos de desarrollo?
+                            <span class="faq-icon"><span class="material-icons">add</span></span>
+                        </button>
+                        <div class="faq-answer">
+                            Sí. Nuestros informes de Due Diligence están estructurados para cumplir los
+                            estándares requeridos por bancos multilaterales, fondos de capital privado
+                            y aseguradoras que financian proyectos de energía renovable.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            ¿Cuánto tiempo toma un proceso de Due Diligence completo?
+                            <span class="faq-icon"><span class="material-icons">add</span></span>
+                        </button>
+                        <div class="faq-answer">
+                            Dependiendo del alcance y la complejidad del proyecto, un Due Diligence
+                            completo puede tomar entre 4 y 10 semanas. Ofrecemos modalidades express
+                            para procesos con plazos ajustados.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+</section>
+
+@section Scripts {
+    <script src="~/js/service-faq.js" asp-append-version="true"></script>
+}

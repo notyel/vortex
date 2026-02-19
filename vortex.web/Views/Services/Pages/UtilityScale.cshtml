@@ -1,0 +1,168 @@
+@{
+    ViewData["Title"] = "Desarrollo y Estructuración de Proyectos - VORTEX Renewables";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/components/_page-hero.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/pages/service-detail.css" asp-append-version="true" />
+}
+
+<partial name="~/Views/Shared/Components/_PageHero.cshtml" model='@(new PageHeroViewModel
+{
+    Title = "Desarrollo de Proyectos",
+    Breadcrumbs =
+    [
+        new BreadcrumbItem { Label = "Inicio", Url = "/" },
+        new BreadcrumbItem { Label = "Servicios", Url = "/Services" },
+        new BreadcrumbItem { Label = "Desarrollo de Proyectos" }
+    ]
+})' />
+
+<section class="service-detail-layout">
+    <div class="container">
+
+        <partial name="~/Views/Shared/Components/_ServicesMenu.cshtml" />
+
+        <main class="service-main-content">
+            <img src="~/images/slider-1.jpg"
+                 alt="Desarrollo y estructuración de proyectos de energía renovable"
+                 class="service-main-image" />
+
+            <div class="service-main-body">
+                <h2 class="service-main-title">
+                    Desarrollo y Estructuración de Proyectos (Utility-Scale)
+                </h2>
+                <p class="service-main-description">
+                    Ofrecemos soluciones integrales para proyectos de energía renovable a gran escala.
+                    Acompañamos cada etapa del ciclo de vida del proyecto, desde la identificación del
+                    sitio hasta la operación comercial, garantizando bancabilidad, cumplimiento regulatorio
+                    y maximización del retorno de inversión.
+                </p>
+                <p class="service-main-description">
+                    Nuestro equipo multidisciplinario gestiona la complejidad técnica, legal, financiera
+                    y ambiental para que tu proyecto llegue a RTB (Ready-to-Build) en los tiempos y
+                    condiciones óptimas.
+                </p>
+
+                @* Mini tarjetas destacadas *@
+                <div class="service-highlights">
+                    <div class="service-highlight-card">
+                        <img src="~/images/dtls-img.jpg" alt="Ingeniería de proyectos" />
+                        <div class="service-highlight-card-content">
+                            <h4>Ingeniería Integral</h4>
+                            <p>Conceptual, básica y de detalle para proyectos solares y eólicos.</p>
+                        </div>
+                    </div>
+                    <div class="service-highlight-card">
+                        <img src="~/images/dtls-img2.jpg" alt="Estructuración financiera" />
+                        <div class="service-highlight-card-content">
+                            <h4>Estructuración Financiera</h4>
+                            <p>Modelación financiera y estructuración de PPAs competitivos.</p>
+                        </div>
+                    </div>
+                </div>
+
+                @* Lista de características + bloque de valor *@
+                <div class="service-features-row">
+                    <div class="service-features-columns">
+                        <div class="service-feature-check">
+                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            Identificación y aseguramiento de terrenos estratégicos
+                        </div>
+                        <div class="service-feature-check">
+                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            Modelación financiera y estructuración de PPAs
+                        </div>
+                        <div class="service-feature-check">
+                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            Gestión de permisos ambientales, sociales y regulatorios
+                        </div>
+                        <div class="service-feature-check">
+                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            Acompañamiento hasta RTB y soporte hasta COD
+                        </div>
+                        <div class="service-feature-check">
+                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            Ingeniería conceptual, básica y de detalle
+                        </div>
+                        <div class="service-feature-check">
+                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            Gestión de beneficios tributarios UPME
+                        </div>
+                        <div class="service-feature-check">
+                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            Certificaciones RETIE
+                        </div>
+                        <div class="service-feature-check">
+                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            Estudios de conexión y tramitación ante el operador de red
+                        </div>
+                    </div>
+                    <div class="service-value-block">
+                        <p class="service-value-block-label">Nuestra fortaleza</p>
+                        <h3 class="service-value-block-title">De la idea al proyecto bancable</h3>
+                    </div>
+                </div>
+
+                @* FAQ *@
+                <div class="service-faq">
+                    <h3 class="service-faq-title">Preguntas Frecuentes</h3>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            ¿Qué es un proyecto Utility-Scale?
+                            <span class="faq-icon"><span class="material-icons">add</span></span>
+                        </button>
+                        <div class="faq-answer">
+                            Son proyectos de generación de energía renovable a gran escala (generalmente
+                            superiores a 1 MW) destinados a inyectar energía al sistema interconectado o
+                            a satisfacer grandes demandas industriales mediante contratos PPA.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            ¿Cuánto tiempo toma desarrollar un proyecto hasta RTB?
+                            <span class="faq-icon"><span class="material-icons">add</span></span>
+                        </button>
+                        <div class="faq-answer">
+                            El tiempo varía según la tecnología, la complejidad ambiental y el contexto
+                            regulatorio, pero en Colombia un proyecto solar puede alcanzar RTB entre
+                            18 y 36 meses desde la identificación del sitio.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            ¿Qué son los beneficios tributarios UPME?
+                            <span class="faq-icon"><span class="material-icons">add</span></span>
+                        </button>
+                        <div class="faq-answer">
+                            La UPME (Unidad de Planeación Minero-Energética) certifica proyectos de
+                            energías renovables no convencionales para acceder a beneficios como
+                            exclusión del IVA, deducción del impuesto de renta y depreciación acelerada
+                            de activos, conforme a la Ley 1715 de 2014.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            ¿VORTEX puede gestionar el proyecto de principio a fin?
+                            <span class="faq-icon"><span class="material-icons">add</span></span>
+                        </button>
+                        <div class="faq-answer">
+                            Sí. Brindamos acompañamiento integral desde la prospección del sitio y
+                            la estructuración del proyecto hasta la gestión de la construcción (EPC)
+                            y el soporte durante la operación comercial (COD).
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+</section>
+
+@section Scripts {
+    <script src="~/js/service-faq.js" asp-append-version="true"></script>
+}

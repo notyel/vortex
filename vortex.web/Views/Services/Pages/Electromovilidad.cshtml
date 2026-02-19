@@ -1,0 +1,173 @@
+@{
+    ViewData["Title"] = "Soluciones de Electromovilidad - VORTEX Renewables";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/components/_page-hero.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/pages/service-detail.css" asp-append-version="true" />
+}
+
+<partial name="~/Views/Shared/Components/_PageHero.cshtml" model='@(new PageHeroViewModel
+{
+    Title = "Electromovilidad",
+    Breadcrumbs =
+    [
+        new BreadcrumbItem { Label = "Inicio", Url = "/" },
+        new BreadcrumbItem { Label = "Servicios", Url = "/Services" },
+        new BreadcrumbItem { Label = "Electromovilidad" }
+    ]
+})' />
+
+<section class="service-detail-layout">
+    <div class="container">
+
+        <partial name="~/Views/Shared/Components/_ServicesMenu.cshtml" />
+
+        <main class="service-main-content">
+            <img src="~/images/energia-limpia.jpg"
+                 alt="Infraestructura de carga para vehículos eléctricos"
+                 class="service-main-image" />
+
+            <div class="service-main-body">
+                <h2 class="service-main-title">
+                    Soluciones de Electromovilidad
+                </h2>
+                <p class="service-main-description">
+                    Desarrollamos infraestructura completa para vehículos eléctricos, integrando
+                    energías renovables para una movilidad limpia, inteligente y eficiente. Diseñamos
+                    soluciones a medida para empresas que desean convertir su flota, operadores de
+                    estaciones de carga y entidades públicas que buscan avanzar en la descarbonización
+                    del transporte.
+                </p>
+                <p class="service-main-description">
+                    Combinamos tecnología de carga de última generación con sistemas de generación solar
+                    para ofrecer soluciones energéticamente autosuficientes y con la menor huella de
+                    carbono posible.
+                </p>
+
+                @* Mini tarjetas destacadas *@
+                <div class="service-highlights">
+                    <div class="service-highlight-card">
+                        <img src="~/images/slider-3.jpg" alt="Electrolineras públicas y privadas" />
+                        <div class="service-highlight-card-content">
+                            <h4>Electrolineras</h4>
+                            <p>Diseño e instalación de puntos de carga públicos y privados.</p>
+                        </div>
+                    </div>
+                    <div class="service-highlight-card">
+                        <img src="~/images/transicion-a-energias-limpias.jpg" alt="Conversión de flotas eléctricas" />
+                        <div class="service-highlight-card-content">
+                            <h4>Conversión de Flotas</h4>
+                            <p>Estrategia y ejecución para migrar flotas corporativas a vehículos eléctricos.</p>
+                        </div>
+                    </div>
+                </div>
+
+                @* Lista de características + bloque de valor *@
+                <div class="service-features-row">
+                    <div class="service-features-columns">
+                        <div class="service-feature-check">
+                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            Diseño e instalación de electrolineras públicas y privadas
+                        </div>
+                        <div class="service-feature-check">
+                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            Operación y mantenimiento de infraestructura de carga
+                        </div>
+                        <div class="service-feature-check">
+                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            Cargadores inteligentes Nivel 2 y DC Fast Charging
+                        </div>
+                        <div class="service-feature-check">
+                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            Integración con sistemas de gestión de energía (EMS)
+                        </div>
+                        <div class="service-feature-check">
+                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            Conversión y renovación de flotas corporativas
+                        </div>
+                        <div class="service-feature-check">
+                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            Carga solar integrada (EV + fotovoltaico)
+                        </div>
+                        <div class="service-feature-check">
+                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            Análisis de viabilidad y retorno de inversión
+                        </div>
+                        <div class="service-feature-check">
+                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            Tramitación ante operadores de red y entidades reguladoras
+                        </div>
+                    </div>
+                    <div class="service-value-block">
+                        <p class="service-value-block-label">Nuestra fortaleza</p>
+                        <h3 class="service-value-block-title">Movilidad limpia impulsada por energía renovable</h3>
+                    </div>
+                </div>
+
+                @* FAQ *@
+                <div class="service-faq">
+                    <h3 class="service-faq-title">Preguntas Frecuentes</h3>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            ¿Cuál es la diferencia entre cargadores Nivel 2 y DC Fast Charging?
+                            <span class="faq-icon"><span class="material-icons">add</span></span>
+                        </button>
+                        <div class="faq-answer">
+                            Los cargadores Nivel 2 (AC) operan entre 7 y 22 kW y son ideales para
+                            flotas corporativas, parqueaderos residenciales y comerciales con tiempos
+                            de carga de 4 a 8 horas. Los DC Fast Chargers superan los 50 kW y pueden
+                            cargar un vehículo en 30 a 60 minutos, siendo ideales para electrolineras
+                            de paso o flotas de alto ciclo.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            ¿Es posible integrar paneles solares con la infraestructura de carga?
+                            <span class="faq-icon"><span class="material-icons">add</span></span>
+                        </button>
+                        <div class="faq-answer">
+                            Sí. VORTEX diseña soluciones híbridas donde los paneles solares alimentan
+                            directamente los cargadores, reduciendo el costo por kWh de carga y
+                            disminuyendo la huella de carbono de la flota hasta en un 80%.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            ¿Qué implica la conversión de una flota corporativa?
+                            <span class="faq-icon"><span class="material-icons">add</span></span>
+                        </button>
+                        <div class="faq-answer">
+                            Incluye el análisis de los patrones de operación de la flota actual, la
+                            selección de los vehículos eléctricos más adecuados, la planificación de
+                            la infraestructura de carga necesaria, los trámites regulatorios y la
+                            capacitación del personal, acompañado de un análisis de TCO (Total Cost
+                            of Ownership) para demostrar el ahorro a largo plazo.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            ¿VORTEX ofrece servicios de mantenimiento post-instalación?
+                            <span class="faq-icon"><span class="material-icons">add</span></span>
+                        </button>
+                        <div class="faq-answer">
+                            Sí. Ofrecemos contratos de operación y mantenimiento (O&M) que incluyen
+                            monitoreo remoto 24/7, mantenimiento preventivo programado y atención
+                            de fallas en campo, garantizando la máxima disponibilidad de tu
+                            infraestructura de carga.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+</section>
+
+@section Scripts {
+    <script src="~/js/service-faq.js" asp-append-version="true"></script>
+}
