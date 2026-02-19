@@ -5,6 +5,7 @@
 @section Styles {
     <link rel="stylesheet" href="~/css/components/_page-hero.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/pages/service-detail.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/components/_faq.css" asp-append-version="true" />
 }
 
 <partial name="~/Views/Shared/Components/_PageHero.cshtml" model='@(new PageHeroViewModel
@@ -65,35 +66,35 @@
                 <div class="service-features-row">
                     <div class="service-features-columns">
                         <div class="service-feature-check">
-                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            <span class="material-icons" aria-hidden="true">check</span>
                             Sistemas solares fotovoltaicos residenciales
                         </div>
                         <div class="service-feature-check">
-                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            <span class="material-icons" aria-hidden="true">check</span>
                             Optimización de autoconsumo
                         </div>
                         <div class="service-feature-check">
-                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            <span class="material-icons" aria-hidden="true">check</span>
                             Sistemas solares comerciales e industriales
                         </div>
                         <div class="service-feature-check">
-                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            <span class="material-icons" aria-hidden="true">check</span>
                             Contratos PPA on-site
                         </div>
                         <div class="service-feature-check">
-                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            <span class="material-icons" aria-hidden="true">check</span>
                             Sistemas híbridos con almacenamiento en baterías
                         </div>
                         <div class="service-feature-check">
-                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            <span class="material-icons" aria-hidden="true">check</span>
                             Monitoreo y mantenimiento 24/7
                         </div>
                         <div class="service-feature-check">
-                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            <span class="material-icons" aria-hidden="true">check</span>
                             Auditorías energéticas previas
                         </div>
                         <div class="service-feature-check">
-                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            <span class="material-icons" aria-hidden="true">check</span>
                             Gestión de trámites de conexión a la red
                         </div>
                     </div>
@@ -104,61 +105,18 @@
                 </div>
 
                 @* FAQ *@
-                <div class="service-faq">
-                    <h3 class="service-faq-title">Preguntas Frecuentes</h3>
-
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            ¿Qué es la generación distribuida?
-                            <span class="faq-icon"><span class="material-icons">add</span></span>
-                        </button>
-                        <div class="faq-answer">
-                            Es la producción de energía eléctrica en el mismo lugar o cerca del punto
-                            de consumo, generalmente a través de sistemas solares fotovoltaicos. Permite
-                            al usuario reducir su dependencia de la red eléctrica y aprovechar beneficios
-                            regulatorios como la Ley 1715.
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            ¿Cuánto puedo ahorrar en mi factura energética?
-                            <span class="faq-icon"><span class="material-icons">add</span></span>
-                        </button>
-                        <div class="faq-answer">
-                            Dependiendo del tamaño del sistema, la irradiación solar del lugar y el
-                            perfil de consumo, los ahorros pueden oscilar entre el 40% y el 90% de la
-                            factura energética mensual. Realizamos una auditoría gratuita para estimar
-                            el ahorro real de tu instalación.
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            ¿En cuánto tiempo se recupera la inversión?
-                            <span class="faq-icon"><span class="material-icons">add</span></span>
-                        </button>
-                        <div class="faq-answer">
-                            El período de retorno de inversión (payback) típico en Colombia es de
-                            4 a 7 años para sistemas industriales y comerciales, con una vida útil
-                            de los paneles superior a 25 años. Los beneficios tributarios de la Ley
-                            1715 pueden reducir este período significativamente.
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            ¿Puedo vender el excedente de energía a la red?
-                            <span class="faq-icon"><span class="material-icons">add</span></span>
-                        </button>
-                        <div class="faq-answer">
-                            Sí. La regulación colombiana (CREG 030 de 2018 y sus actualizaciones)
-                            permite a los autogeneradores de pequeña escala inyectar excedentes a la
-                            red y recibir una compensación económica. VORTEX te ayuda a tramitar el
-                            proceso ante el operador de red.
-                        </div>
-                    </div>
-                </div>
+                @* FAQ *@
+                <partial name="~/Views/Shared/Components/_Faq.cshtml" model='@(new FaqViewModel
+                {
+                    Title = "Preguntas Frecuentes",
+                    Items =
+                    [
+                        new FaqItem { Question = "¿Qué es la generación distribuida?", Answer = "Es la producción de energía eléctrica en el mismo lugar o cerca del punto de consumo, generalmente a través de sistemas solares fotovoltaicos. Permite al usuario reducir su dependencia de la red eléctrica y aprovechar beneficios regulatorios como la Ley 1715." },
+                        new FaqItem { Question = "¿Cuánto puedo ahorrar en mi factura energética?", Answer = "Dependiendo del tamaño del sistema, la irradiación solar del lugar y el perfil de consumo, los ahorros pueden oscilar entre el 40% y el 90% de la factura energética mensual. Realizamos una auditoría gratuita para estimar el ahorro real de tu instalación." },
+                        new FaqItem { Question = "¿En cuánto tiempo se recupera la inversión?", Answer = "El período de retorno de inversión (payback) típico en Colombia es de 4 a 7 años para sistemas industriales y comerciales, con una vida útil de los paneles superior a 25 años. Los beneficios tributarios de la Ley 1715 pueden reducir este período significativamente." },
+                        new FaqItem { Question = "¿Puedo vender el excedente de energía a la red?", Answer = "Sí. La regulación colombiana (CREG 030 de 2018 y sus actualizaciones) permite a los autogeneradores de pequeña escala inyectar excedentes a la red y recibir una compensación económica. VORTEX te ayuda a tramitar el proceso ante el operador de red." }
+                    ]
+                })' />
             </div>
         </main>
 

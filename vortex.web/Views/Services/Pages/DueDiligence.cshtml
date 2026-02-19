@@ -5,6 +5,7 @@
 @section Styles {
     <link rel="stylesheet" href="~/css/components/_page-hero.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/pages/service-detail.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/components/_faq.css" asp-append-version="true" />
 }
 
 <partial name="~/Views/Shared/Components/_PageHero.cshtml" model='@(new PageHeroViewModel
@@ -69,35 +70,35 @@
                 <div class="service-features-row">
                     <div class="service-features-columns">
                         <div class="service-feature-check">
-                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            <span class="material-icons" aria-hidden="true">check</span>
                             Due Diligence Técnica
                         </div>
                         <div class="service-feature-check">
-                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            <span class="material-icons" aria-hidden="true">check</span>
                             Due Diligence Ambiental y Social (E&S)
                         </div>
                         <div class="service-feature-check">
-                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            <span class="material-icons" aria-hidden="true">check</span>
                             Due Diligence Financiera
                         </div>
                         <div class="service-feature-check">
-                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            <span class="material-icons" aria-hidden="true">check</span>
                             Scouting y verificación en campo
                         </div>
                         <div class="service-feature-check">
-                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            <span class="material-icons" aria-hidden="true">check</span>
                             Revisión de contratos y estructura legal
                         </div>
                         <div class="service-feature-check">
-                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            <span class="material-icons" aria-hidden="true">check</span>
                             Modelación financiera independiente
                         </div>
                         <div class="service-feature-check">
-                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            <span class="material-icons" aria-hidden="true">check</span>
                             Evaluación de permisos y licencias
                         </div>
                         <div class="service-feature-check">
-                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            <span class="material-icons" aria-hidden="true">check</span>
                             Informes bancables para financiadores
                         </div>
                     </div>
@@ -108,58 +109,17 @@
                 </div>
 
                 @* FAQ *@
-                <div class="service-faq">
-                    <h3 class="service-faq-title">Preguntas Frecuentes</h3>
-
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            ¿En qué etapa del proyecto se realiza el Due Diligence?
-                            <span class="faq-icon"><span class="material-icons">add</span></span>
-                        </button>
-                        <div class="faq-answer">
-                            Puede realizarse en distintas etapas: antes de adquirir un proyecto (M&A),
-                            previo al cierre financiero con bancos o fondos, o como auditoría técnica
-                            durante la construcción y puesta en marcha.
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            ¿Qué diferencia al Due Diligence de VORTEX?
-                            <span class="faq-icon"><span class="material-icons">add</span></span>
-                        </button>
-                        <div class="faq-answer">
-                            Combinamos experiencia técnica en campo con conocimiento financiero y legal
-                            del mercado energético colombiano y latinoamericano. Nuestros reportes son
-                            reconocidos por instituciones financieras internacionales como sólidos y
-                            objetivos.
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            ¿Trabajan con fondos de inversión y bancos de desarrollo?
-                            <span class="faq-icon"><span class="material-icons">add</span></span>
-                        </button>
-                        <div class="faq-answer">
-                            Sí. Nuestros informes de Due Diligence están estructurados para cumplir los
-                            estándares requeridos por bancos multilaterales, fondos de capital privado
-                            y aseguradoras que financian proyectos de energía renovable.
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            ¿Cuánto tiempo toma un proceso de Due Diligence completo?
-                            <span class="faq-icon"><span class="material-icons">add</span></span>
-                        </button>
-                        <div class="faq-answer">
-                            Dependiendo del alcance y la complejidad del proyecto, un Due Diligence
-                            completo puede tomar entre 4 y 10 semanas. Ofrecemos modalidades express
-                            para procesos con plazos ajustados.
-                        </div>
-                    </div>
-                </div>
+                <partial name="~/Views/Shared/Components/_Faq.cshtml" model='@(new FaqViewModel
+                {
+                    Title = "Preguntas Frecuentes",
+                    Items =
+                    [
+                        new FaqItem { Question = "¿En qué etapa del proyecto se realiza el Due Diligence?", Answer = "Puede realizarse en distintas etapas: antes de adquirir un proyecto (M&A), previo al cierre financiero con bancos o fondos, o como auditoría técnica durante la construcción y puesta en marcha." },
+                        new FaqItem { Question = "¿Qué diferencia al Due Diligence de VORTEX?", Answer = "Combinamos experiencia técnica en campo con conocimiento financiero y legal del mercado energético colombiano y latinoamericano. Nuestros reportes son reconocidos por instituciones financieras internacionales como sólidos y objetivos." },
+                        new FaqItem { Question = "¿Trabajan con fondos de inversión y bancos de desarrollo?", Answer = "Sí. Nuestros informes de Due Diligence están estructurados para cumplir los estándares requeridos por bancos multilaterales, fondos de capital privado y aseguradoras que financian proyectos de energía renovable." },
+                        new FaqItem { Question = "¿Cuánto tiempo toma un proceso de Due Diligence completo?", Answer = "Dependiendo del alcance y la complejidad del proyecto, un Due Diligence completo puede tomar entre 4 y 10 semanas. Ofrecemos modalidades express para procesos con plazos ajustados." }
+                    ]
+                })' />
             </div>
         </main>
 

@@ -5,6 +5,7 @@
 @section Styles {
     <link rel="stylesheet" href="~/css/components/_page-hero.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/pages/service-detail.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/components/_faq.css" asp-append-version="true" />
 }
 
 <partial name="~/Views/Shared/Components/_PageHero.cshtml" model='@(new PageHeroViewModel
@@ -66,35 +67,35 @@
                 <div class="service-features-row">
                     <div class="service-features-columns">
                         <div class="service-feature-check">
-                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            <span class="material-icons" aria-hidden="true">check</span>
                             Identificación y aseguramiento de terrenos estratégicos
                         </div>
                         <div class="service-feature-check">
-                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            <span class="material-icons" aria-hidden="true">check</span>
                             Modelación financiera y estructuración de PPAs
                         </div>
                         <div class="service-feature-check">
-                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            <span class="material-icons" aria-hidden="true">check</span>
                             Gestión de permisos ambientales, sociales y regulatorios
                         </div>
                         <div class="service-feature-check">
-                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            <span class="material-icons" aria-hidden="true">check</span>
                             Acompañamiento hasta RTB y soporte hasta COD
                         </div>
                         <div class="service-feature-check">
-                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            <span class="material-icons" aria-hidden="true">check</span>
                             Ingeniería conceptual, básica y de detalle
                         </div>
                         <div class="service-feature-check">
-                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            <span class="material-icons" aria-hidden="true">check</span>
                             Gestión de beneficios tributarios UPME
                         </div>
                         <div class="service-feature-check">
-                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            <span class="material-icons" aria-hidden="true">check</span>
                             Certificaciones RETIE
                         </div>
                         <div class="service-feature-check">
-                            <span class="material-icons" aria-hidden="true">check_circle</span>
+                            <span class="material-icons" aria-hidden="true">check</span>
                             Estudios de conexión y tramitación ante el operador de red
                         </div>
                     </div>
@@ -105,58 +106,17 @@
                 </div>
 
                 @* FAQ *@
-                <div class="service-faq">
-                    <h3 class="service-faq-title">Preguntas Frecuentes</h3>
-
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            ¿Qué es un proyecto Utility-Scale?
-                            <span class="faq-icon"><span class="material-icons">add</span></span>
-                        </button>
-                        <div class="faq-answer">
-                            Son proyectos de generación de energía renovable a gran escala (generalmente
-                            superiores a 1 MW) destinados a inyectar energía al sistema interconectado o
-                            a satisfacer grandes demandas industriales mediante contratos PPA.
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            ¿Cuánto tiempo toma desarrollar un proyecto hasta RTB?
-                            <span class="faq-icon"><span class="material-icons">add</span></span>
-                        </button>
-                        <div class="faq-answer">
-                            El tiempo varía según la tecnología, la complejidad ambiental y el contexto
-                            regulatorio, pero en Colombia un proyecto solar puede alcanzar RTB entre
-                            18 y 36 meses desde la identificación del sitio.
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            ¿Qué son los beneficios tributarios UPME?
-                            <span class="faq-icon"><span class="material-icons">add</span></span>
-                        </button>
-                        <div class="faq-answer">
-                            La UPME (Unidad de Planeación Minero-Energética) certifica proyectos de
-                            energías renovables no convencionales para acceder a beneficios como
-                            exclusión del IVA, deducción del impuesto de renta y depreciación acelerada
-                            de activos, conforme a la Ley 1715 de 2014.
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            ¿VORTEX puede gestionar el proyecto de principio a fin?
-                            <span class="faq-icon"><span class="material-icons">add</span></span>
-                        </button>
-                        <div class="faq-answer">
-                            Sí. Brindamos acompañamiento integral desde la prospección del sitio y
-                            la estructuración del proyecto hasta la gestión de la construcción (EPC)
-                            y el soporte durante la operación comercial (COD).
-                        </div>
-                    </div>
-                </div>
+                <partial name="~/Views/Shared/Components/_Faq.cshtml" model='@(new FaqViewModel
+                {
+                    Title = "Preguntas Frecuentes",
+                    Items =
+                    [
+                        new FaqItem { Question = "¿Qué es un proyecto Utility-Scale?", Answer = "Son proyectos de generación de energía renovable a gran escala (generalmente superiores a 1 MW) destinados a inyectar energía al sistema interconectado o a satisfacer grandes demandas industriales mediante contratos PPA." },
+                        new FaqItem { Question = "¿Cuánto tiempo toma desarrollar un proyecto hasta RTB?", Answer = "El tiempo varía según la tecnología, la complejidad ambiental y el contexto regulatorio, pero en Colombia un proyecto solar puede alcanzar RTB entre 18 y 36 meses desde la identificación del sitio." },
+                        new FaqItem { Question = "¿Qué son los beneficios tributarios UPME?", Answer = "La UPME (Unidad de Planeación Minero-Energética) certifica proyectos de energías renovables no convencionales para acceder a beneficios como exclusión del IVA, deducción del impuesto de renta y depreciación acelerada de activos, conforme a la Ley 1715 de 2014." },
+                        new FaqItem { Question = "¿VORTEX puede gestionar el proyecto de principio a fin?", Answer = "Sí. Brindamos acompañamiento integral desde la prospección del sitio y la estructuración del proyecto hasta la gestión de la construcción (EPC) y el soporte durante la operación comercial (COD)." }
+                    ]
+                })' />
             </div>
         </main>
 

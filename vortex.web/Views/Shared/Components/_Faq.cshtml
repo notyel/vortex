@@ -1,0 +1,25 @@
+@model FaqViewModel
+
+<div class="faq-accordion">
+    @if (!string.IsNullOrEmpty(Model.Title))
+    {
+        <h3 class="faq-accordion-title">@Model.Title</h3>
+    }
+
+    @foreach (var item in Model.Items)
+    {
+        <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text">@item.Question</span>
+                <span class="faq-icon-circle" aria-hidden="true">
+                    <span class="material-icons faq-icon-glyph">add</span>
+                </span>
+            </button>
+            <div class="faq-answer" role="region">
+                <div class="faq-answer-inner">
+                    @item.Answer
+                </div>
+            </div>
+        </div>
+    }
+</div>
