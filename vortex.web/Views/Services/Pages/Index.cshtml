@@ -2,11 +2,39 @@
     ViewData["Title"] = "Servicios - VORTEX Renewables";
 }
 
-<section class="section">
+@section Styles {
+    <link rel="stylesheet" href="~/css/components/_page-hero.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/components/_services.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/pages/services.css" asp-append-version="true" />
+}
+
+<partial name="~/Views/Shared/Components/_PageHero.cshtml" model='@(new PageHeroViewModel
+{
+    Title = "Servicios",
+    Breadcrumbs =
+    [
+        new BreadcrumbItem { Label = "Inicio", Url = "/" },
+        new BreadcrumbItem { Label = "Servicios" }
+    ]
+})' />
+
+
+
+
+@* Componente de servicios reutilizado de la landing *@
+<partial name="~/Views/Landing/Components/_Services.cshtml" />
+
+@* CTA final *@
+<section class="services-cta">
     <div class="container">
-        <h1 class="section-title">Nuestros Servicios</h1>
-        <p class="section-subtitle">
-            Ofrecemos soluciones integrales en energías renovables.
+        <h2 class="services-cta-title">¿Listo para impulsar tu proyecto energético?</h2>
+        <p class="services-cta-description">
+            Contáctanos y uno de nuestros especialistas evaluará tus necesidades
+            y te presentará la solución más adecuada.
         </p>
+        <div class="services-cta-actions">
+            <a href="/#contacto" class="btn btn-primary">Hablar con un especialista</a>
+            <a href="/" class="btn btn-outline">Volver al inicio</a>
+        </div>
     </div>
 </section>

@@ -10,10 +10,9 @@
         
         <nav class="nav">
             <ul class="nav-list">
-                <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
-                <li><a href="#servicios" class="nav-link">Servicios</a></li>
-                <li><a href="#valores" class="nav-link">Valores</a></li>
-                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                <li><a asp-controller="Landing" asp-action="Index" class="nav-link">Inicio</a></li>
+                <li><a asp-controller="Services" asp-action="Index" class="nav-link">Servicios</a></li>
+                <li><a asp-controller="Contact" asp-action="Index" class="nav-link">Contacto</a></li>
                 <li>
                     <a asp-controller="AboutUs" asp-action="Index" class="btn-primary">
                         Sobre Nosotros <span class="material-symbols-outlined">
@@ -33,10 +32,9 @@
     
     <div class="nav-mobile" id="navMobile">
         <ul class="nav-list">
-            <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
-            <li><a href="#servicios" class="nav-link">Servicios</a></li>
-            <li><a href="#valores" class="nav-link">Valores</a></li>
-            <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            <li><a asp-controller="Landing" asp-action="Index" class="nav-link">Inicio</a></li>
+            <li><a asp-controller="Services" asp-action="Index" class="nav-link">Servicios</a></li>
+            <li><a asp-controller="Contact" asp-action="Index" class="nav-link">Contacto</a></li>
             <li><a asp-controller="AboutUs" asp-action="Index" class="btn-primary">Sobre Nosotros <span class="material-symbols-outlined btn-icon">arrow_circle_right</span></a></li>
         </ul>
     </div>

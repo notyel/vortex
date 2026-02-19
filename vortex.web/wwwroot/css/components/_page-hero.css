@@ -1,0 +1,84 @@
+/* Page Hero - Banner de páginas internas */
+
+.page-hero {
+    position: relative;
+    background-image: url('/images/bradcumb-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 280px;
+    display: flex;
+    align-items: center;
+}
+
+.page-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(5, 20, 35, 0.62);
+}
+
+.page-hero .container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+}
+
+.page-hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.page-hero-title {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-white);
+    line-height: 1.2;
+    margin: 0;
+    font-family: var(--font-family-heading);
+}
+
+/* Breadcrumb */
+.page-hero-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+}
+
+.breadcrumb-link {
+    font-size: var(--font-size-base);
+    color: var(--color-primary-light);
+    text-decoration: none;
+    font-weight: var(--font-weight-medium);
+    transition: color var(--transition-fast);
+}
+
+.breadcrumb-link:hover {
+    color: var(--color-white);
+    text-decoration: underline;
+}
+
+.breadcrumb-separator {
+    font-size: var(--font-size-base);
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1;
+}
+
+.breadcrumb-current {
+    font-size: var(--font-size-base);
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: var(--font-weight-normal);
+}
+
+@media (min-width: 768px) {
+    .page-hero {
+        min-height: 340px;
+    }
+
+    .page-hero-title {
+        font-size: var(--font-size-5xl);
+    }
+}
