@@ -11,14 +11,36 @@
         <nav class="nav">
             <ul class="nav-list">
                 <li><a asp-controller="Landing" asp-action="Index" class="nav-link">Inicio</a></li>
-                <li><a asp-controller="Services" asp-action="Index" class="nav-link">Servicios</a></li>
+                <li><a asp-controller="AboutUs" asp-action="Index" class="nav-link">Sobre Nosotros</a></li>
                 <li><a asp-controller="Contact" asp-action="Index" class="nav-link">Contacto</a></li>
-                <li>
-                    <a asp-controller="AboutUs" asp-action="Index" class="btn-primary">
-                        Sobre Nosotros <span class="material-symbols-outlined">
-                            arrow_circle_right
-                        </span>
-                    </a>
+                <li class="nav-dropdown">
+                    <button type="button" class="btn-primary nav-dropdown__trigger" aria-expanded="false" aria-haspopup="true">
+                        Servicios
+                        <span class="material-symbols-outlined nav-dropdown__icon">expand_more</span>
+                    </button>
+                    <div class="nav-dropdown__panel" role="menu">
+                        <a asp-controller="Services" asp-action="UtilityScale" class="nav-dropdown__item" role="menuitem">
+                            <span class="material-symbols-outlined nav-dropdown__item-icon">bolt</span>
+                            Desarrollo de Proyectos
+                        </a>
+                        <a asp-controller="Services" asp-action="DueDiligence" class="nav-dropdown__item" role="menuitem">
+                            <span class="material-symbols-outlined nav-dropdown__item-icon">manage_search</span>
+                            Due Diligence Integral
+                        </a>
+                        <a asp-controller="Services" asp-action="Distribuida" class="nav-dropdown__item" role="menuitem">
+                            <span class="material-symbols-outlined nav-dropdown__item-icon">solar_power</span>
+                            Generación Distribuida
+                        </a>
+                        <a asp-controller="Services" asp-action="Electromovilidad" class="nav-dropdown__item" role="menuitem">
+                            <span class="material-symbols-outlined nav-dropdown__item-icon">ev_station</span>
+                            Soluciones de Electromovilidad
+                        </a>
+                        <div class="nav-dropdown__divider"></div>
+                        <a asp-controller="Services" asp-action="Index" class="nav-dropdown__all" role="menuitem">
+                            Ver todos los servicios
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                    </div>
                 </li>
             </ul>
         </nav>
@@ -33,9 +55,46 @@
     <div class="nav-mobile" id="navMobile">
         <ul class="nav-list">
             <li><a asp-controller="Landing" asp-action="Index" class="nav-link">Inicio</a></li>
-            <li><a asp-controller="Services" asp-action="Index" class="nav-link">Servicios</a></li>
+            <li><a asp-controller="AboutUs" asp-action="Index" class="nav-link">Sobre Nosotros</a></li>
             <li><a asp-controller="Contact" asp-action="Index" class="nav-link">Contacto</a></li>
-            <li><a asp-controller="AboutUs" asp-action="Index" class="btn-primary">Sobre Nosotros <span class="material-symbols-outlined btn-icon">arrow_circle_right</span></a></li>
+            <li class="nav-mobile-dropdown">
+                <button type="button" class="btn-primary nav-mobile-dropdown__trigger" aria-expanded="false">
+                    Servicios
+                    <span class="material-symbols-outlined nav-dropdown__icon">expand_more</span>
+                </button>
+                <ul class="nav-mobile-dropdown__list">
+                    <li>
+                        <a asp-controller="Services" asp-action="UtilityScale" class="nav-mobile-dropdown__item">
+                            <span class="material-symbols-outlined">bolt</span>
+                            Desarrollo de Proyectos
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-controller="Services" asp-action="DueDiligence" class="nav-mobile-dropdown__item">
+                            <span class="material-symbols-outlined">manage_search</span>
+                            Due Diligence Integral
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-controller="Services" asp-action="Distribuida" class="nav-mobile-dropdown__item">
+                            <span class="material-symbols-outlined">solar_power</span>
+                            Generación Distribuida
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-controller="Services" asp-action="Electromovilidad" class="nav-mobile-dropdown__item">
+                            <span class="material-symbols-outlined">ev_station</span>
+                            Soluciones de Electromovilidad
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-controller="Services" asp-action="Index" class="nav-mobile-dropdown__item nav-mobile-dropdown__item--all">
+                            Ver todos los servicios
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
         </ul>
     </div>
 </header>

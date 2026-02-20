@@ -121,4 +121,59 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     window.addEventListener('scroll', updateActiveLink);
+
+    // ─── Dropdown navigation ─────────────────────────────────
+    const dropdowns = document.querySelectorAll('.nav-dropdown');
+    const mobileDropdowns = document.querySelectorAll('.nav-mobile-dropdown');
+
+    function closeAllDropdowns() {
+        dropdowns.forEach(d => {
+            d.classList.remove('is-open');
+            const t = d.querySelector('.nav-dropdown__trigger');
+            if (t) t.setAttribute('aria-expanded', 'false');
+        });
+    }
+
+    // Desktop: toggle on trigger click
+    dropdowns.forEach(dropdown => {
+        const trigger = dropdown.querySelector('.nav-dropdown__trigger');
+        if (!trigger) return;
+
+        trigger.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const isOpen = dropdown.classList.contains('is-open');
+            closeAllDropdowns();
+            if (!isOpen) {
+                dropdown.classList.add('is-open');
+                trigger.setAttribute('aria-expanded', 'true');
+            }
+        });
+    });
+
+    // Close on outside click or ESC
+    document.addEventListener('click', closeAllDropdowns);
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeAllDropdowns();
+    });
+
+    // Mobile: accordion toggle
+    mobileDropdowns.forEach(mobileDropdown => {
+        const trigger = mobileDropdown.querySelector('.nav-mobile-dropdown__trigger');
+        if (!trigger) return;
+
+        trigger.addEventListener('click', function() {
+            mobileDropdown.classList.toggle('is-open');
+            trigger.setAttribute('aria-expanded', mobileDropdown.classList.contains('is-open').toString());
+        });
+
+        // Close mobile menu when a service link is clicked
+        mobileDropdown.querySelectorAll('.nav-mobile-dropdown__item').forEach(link => {
+            link.addEventListener('click', function() {
+                if (navToggle && navMobile) {
+                    navToggle.classList.remove('active');
+                    navMobile.classList.remove('active');
+                }
+            });
+        });
+    });
 });
