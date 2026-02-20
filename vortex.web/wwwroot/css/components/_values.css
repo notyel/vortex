@@ -51,7 +51,7 @@
 .values-label {
     display: inline-flex;
     align-items: center;
-    gap: var(--spacing-sm);
+    gap: var(--spacing-md);
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-bold);
     text-transform: uppercase;
@@ -61,7 +61,7 @@
 
 .values-label-line {
     display: inline-block;
-    width: 40px;
+    width: 50px;
     height: 3px;
     background: linear-gradient(90deg, var(--color-accent-primary), var(--color-accent-gradient));
     border-radius: var(--border-radius-full);
