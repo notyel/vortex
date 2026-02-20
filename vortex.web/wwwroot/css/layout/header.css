@@ -8,7 +8,78 @@
     background-color: var(--color-white);
     box-shadow: var(--shadow-sm);
     z-index: 1000;
-    transition: transform var(--transition-base), box-shadow var(--transition-base);
+    transition: background-color var(--transition-base), box-shadow var(--transition-base), transform var(--transition-base);
+}
+
+/* Transparent header — landing/hero pages */
+.header--hero {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.header--hero .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.header--hero .nav-link::after {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.header--hero .nav-link:hover,
+.header--hero .nav-link.active {
+    color: var(--color-white);
+}
+
+.header--hero .nav-toggle-bar {
+    background-color: var(--color-white);
+}
+
+.header--hero .logo-image {
+    filter: brightness(0) invert(1);
+}
+
+/* Blurred state — frosted glass while scrolling within the hero */
+.header--hero.header--blurred {
+    background-color: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Scrolled state — solid white once hero is completely out of view */
+.header--hero.header--scrolled {
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Shared text/icon colors for both blurred and scrolled states */
+.header--hero.header--blurred .nav-link,
+.header--hero.header--scrolled .nav-link {
+    color: var(--color-gray-700);
+    text-shadow: none;
+}
+
+.header--hero.header--blurred .nav-link::after,
+.header--hero.header--scrolled .nav-link::after {
+    background-color: var(--color-corporate);
+}
+
+.header--hero.header--blurred .nav-link:hover,
+.header--hero.header--blurred .nav-link.active,
+.header--hero.header--scrolled .nav-link:hover,
+.header--hero.header--scrolled .nav-link.active {
+    color: var(--color-corporate);
+}
+
+.header--hero.header--blurred .nav-toggle-bar,
+.header--hero.header--scrolled .nav-toggle-bar {
+    background-color: var(--color-gray-700);
+}
+
+.header--hero.header--blurred .logo-image,
+.header--hero.header--scrolled .logo-image {
+    filter: none;
 }
 
 .header.scroll-down {
@@ -199,4 +270,8 @@
 
 .main-content {
     margin-top: 70px;
+}
+
+.main-content--hero {
+    margin-top: 0;
 }

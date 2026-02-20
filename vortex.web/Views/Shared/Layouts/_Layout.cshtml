@@ -38,7 +38,7 @@
 <body>
     <partial name="~/Views/Shared/Components/_Header.cshtml" />
     
-    <main class="main-content">
+    <main class="main-content @(ViewData["TransparentHeader"] != null ? "main-content--hero" : "")">
         @RenderBody()
     </main>
     

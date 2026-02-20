@@ -3,13 +3,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const navToggle = document.getElementById('navToggle');
     const navMobile = document.getElementById('navMobile');
     const header = document.querySelector('.header');
-    
+    const isHeroHeader = header && header.classList.contains('header--hero');
+
     if (navToggle && navMobile) {
         navToggle.addEventListener('click', function() {
             navToggle.classList.toggle('active');
             navMobile.classList.toggle('active');
         });
-        
+
         // Close mobile menu when clicking on a link
         const navLinks = navMobile.querySelectorAll('.nav-link');
         navLinks.forEach(link => {
@@ -19,7 +20,36 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
-    
+
+    // Hero transparent header: switch to solid white once hero scrolls out of view
+    if (isHeroHeader) {
+        const heroSection = document.querySelector('.hero-video-section');
+
+        function updateHeroHeader() {
+            const threshold = heroSection ? heroSection.offsetHeight : 300;
+            const scrollY = window.pageYOffset;
+
+            if (scrollY >= threshold) {
+                // Past hero: solid white header
+                header.classList.remove('header--blurred');
+                header.classList.add('header--scrolled');
+            } else if (scrollY > 0) {
+                // Within hero but scrolled: frosted glass
+                header.classList.remove('header--scrolled');
+                header.classList.add('header--blurred');
+            } else {
+                // Exactly at top: fully transparent
+                header.classList.remove('header--blurred');
+                header.classList.remove('header--scrolled');
+                header.classList.remove('scroll-down');
+                header.classList.remove('scroll-up');
+            }
+        }
+
+        updateHeroHeader();
+        window.addEventListener('scroll', updateHeroHeader, { passive: true });
+    }
+
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -38,41 +68,47 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
-    // Header scroll effect
+
+    // Header hide on scroll-down / show on scroll-up
     let lastScroll = 0;
     window.addEventListener('scroll', function() {
         const currentScroll = window.pageYOffset;
-        
+        const isScrolled = header.classList.contains('header--scrolled');
+
+        // While the hero header is transparent (not yet scrolled past hero),
+        // keep it always visible — no hide/show behaviour
+        if (isHeroHeader && !isScrolled) {
+            lastScroll = currentScroll;
+            return;
+        }
+
         if (currentScroll <= 0) {
             header.classList.remove('scroll-up');
             return;
         }
-        
+
         if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
-            // Scroll Down
             header.classList.remove('scroll-up');
             header.classList.add('scroll-down');
         } else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
-            // Scroll Up
             header.classList.remove('scroll-down');
             header.classList.add('scroll-up');
         }
         lastScroll = currentScroll;
     });
-    
+
     // Active nav link on scroll
     const sections = document.querySelectorAll('section[id]');
     const navLinksAll = document.querySelectorAll('.nav-link[href^="#"]');
-    
+
     function updateActiveLink() {
         const scrollPosition = window.pageYOffset + 100;
-        
+
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.offsetHeight;
             const sectionId = section.getAttribute('id');
-            
+
             if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
                 navLinksAll.forEach(link => {
                     link.classList.remove('active');
@@ -83,6 +119,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-    
+
     window.addEventListener('scroll', updateActiveLink);
 });
