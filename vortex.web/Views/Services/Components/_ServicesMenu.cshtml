@@ -7,8 +7,16 @@
 
     @* Menú de servicios *@
     <nav class="services-menu-widget" aria-label="Navegación de servicios">
-        <h3 class="services-menu-widget-title">Servicios</h3>
-        <ul class="services-menu-list">
+        <div class="services-menu-header">
+            <h3 class="services-menu-widget-title">Servicios</h3>
+            <button class="services-menu-toggle"
+                    aria-expanded="false"
+                    aria-controls="services-nav-list"
+                    aria-label="Mostrar menú de servicios">
+                <span class="material-icons services-menu-toggle-icon">expand_more</span>
+            </button>
+        </div>
+        <ul class="services-menu-list" id="services-nav-list">
             <li>
                 <a asp-controller="Services" asp-action="UtilityScale"
                    class="services-menu-link @(currentAction == "UtilityScale" ? "active" : "")">

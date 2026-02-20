@@ -327,7 +327,44 @@
     border-top: 1px solid var(--color-gray-200);
 }
 
-/* ===== RESPONSIVE =====
+/* ===== MOBILE SIDEBAR TOGGLE ===== */
+.services-menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--color-gray-200);
+}
+
+.services-menu-header .services-menu-widget-title {
+    border-bottom: none;
+    flex: 1;
+}
+
+.services-menu-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    background: none;
+    border: none;
+    border-left: 1px solid var(--color-gray-200);
+    cursor: pointer;
+    padding: 0 var(--spacing-md);
+    color: var(--color-gray-500);
+    transition: color var(--transition-fast);
+}
+
+.services-menu-toggle:hover {
+    color: var(--color-corporate);
+}
+
+.services-menu-toggle-icon {
+    font-size: 1.5rem;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
     .service-detail-layout .container {
         grid-template-columns: 1fr 240px;
@@ -338,14 +375,40 @@
 @media (max-width: 768px) {
     .service-detail-layout .container {
         grid-template-columns: 1fr;
+        gap: var(--spacing-md);
     }
 
     .service-sidebar {
-        order: 3;
+        order: -1;
     }
 
     .service-main-content {
         order: 1;
+    }
+
+    .brochure-widget,
+    .contact-widget {
+        display: none;
+    }
+
+    .services-menu-toggle {
+        display: flex;
+    }
+
+    .services-menu-list {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        padding: 0;
+    }
+
+    .services-menu-list.open {
+        max-height: 300px;
+        padding: var(--spacing-sm) 0;
+    }
+
+    .services-menu-toggle[aria-expanded="true"] .services-menu-toggle-icon {
+        transform: rotate(180deg);
     }
 
     .service-highlights {
@@ -356,15 +419,21 @@
         grid-template-columns: 1fr;
     }
 
-    .service-features-row {
-        grid-template-columns: 1fr;
-    }
-
     .service-main-image {
         height: 220px;
     }
 
     .service-main-body {
-        padding: var(--spacing-md);
+        padding: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-main-title {
+        font-size: var(--font-size-xl);
+    }
+
+    .service-detail-layout {
+        padding: var(--spacing-xl) 0;
     }
 }

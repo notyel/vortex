@@ -28,4 +28,15 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+
+    // Mobile sidebar menu toggle
+    const sidebarToggle = document.querySelector('.services-menu-toggle');
+    if (sidebarToggle) {
+        sidebarToggle.addEventListener('click', function () {
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', String(!isExpanded));
+            const menuList = document.getElementById('services-nav-list');
+            if (menuList) menuList.classList.toggle('open');
+        });
+    }
 });
