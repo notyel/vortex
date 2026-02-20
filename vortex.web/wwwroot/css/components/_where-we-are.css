@@ -1,0 +1,304 @@
+/* ============================================================
+   WhereWeAre Section — Presencia Nacional en Colombia
+   ============================================================ */
+
+/* ── Section wrapper ── */
+.wwa {
+    position: relative;
+    overflow: hidden;
+    background-color: #080f1e;
+}
+
+/* Mapa mundial punteado como fondo decorativo */
+.wwa::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('/images/where-we-are/world-map-dots-bg.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.07;
+    z-index: 0;
+}
+
+/* ── Container elevado sobre el fondo ── */
+.wwa .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* ── Layout: 2 columnas en desktop ── */
+.wwa-layout {
+    display: grid;
+    gap: var(--spacing-3xl);
+    align-items: center;
+}
+
+@media (min-width: 992px) {
+    .wwa-layout {
+        grid-template-columns: 5fr 7fr;
+    }
+}
+
+/* ── Columna izquierda ── */
+.wwa-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+/* Label */
+.wwa-label {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 2px;
+    color: var(--color-accent-primary);
+    text-transform: uppercase;
+}
+
+.wwa-label-line {
+    width: 50px;
+    height: 3px;
+    background: var(--color-accent-primary);
+    border-radius: var(--border-radius-full);
+    flex-shrink: 0;
+}
+
+.wwa-label-text {
+    color: var(--color-accent-primary);
+}
+
+/* Título */
+.wwa-title {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-white);
+    line-height: 1.2;
+    margin: 0;
+}
+
+.wwa-highlight {
+    color: var(--color-corporate-light);
+}
+
+/* Descripción */
+.wwa-description {
+    font-size: var(--font-size-base);
+    color: rgba(255, 255, 255, 0.72);
+    line-height: 1.85;
+    margin: 0;
+}
+
+/* ── Columna derecha: escenario del mapa ── */
+.wwa-map-stage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg);
+}
+
+/* Marco que contiene glow, anillos y silueta recortada */
+.wwa-map-frame {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Resplandor radial de fondo */
+.wwa-map-glow {
+    position: absolute;
+    inset: -20%;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(15, 157, 88, 0.20) 0%,
+        rgba(0, 119, 182, 0.10) 45%,
+        transparent 70%
+    );
+    pointer-events: none;
+}
+
+/* Anillos decorativos pulsantes */
+.wwa-map-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 1px solid rgba(15, 157, 88, 0.18);
+    pointer-events: none;
+    animation: wwa-ring-pulse 4s ease-in-out infinite;
+}
+
+.wwa-map-ring--outer {
+    width: 90%;
+    aspect-ratio: 1;
+    animation-delay: 0s;
+}
+
+.wwa-map-ring--inner {
+    width: 68%;
+    aspect-ratio: 1;
+    border-color: rgba(0, 167, 255, 0.13);
+    animation-delay: 2s;
+}
+
+@keyframes wwa-ring-pulse {
+    0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
+    50%       { opacity: 1;   transform: translate(-50%, -50%) scale(1.03); }
+}
+
+/* ── Foto recortada con la silueta SVG de Colombia ── */
+.wwa-map-photo-clip {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 320px;
+    /* Proporción exacta del viewBox del SVG: 297.09 × 400 */
+    aspect-ratio: 297 / 400;
+    /* La silueta de Colombia actúa como máscara */
+    -webkit-mask-image: url('/images/where-we-are/country-shape-colombia.svg');
+    mask-image: url('/images/where-we-are/country-shape-colombia.svg');
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    /* Glow corporativo alrededor de la silueta */
+    filter:
+        drop-shadow(0 0 28px rgba(15, 157, 88, 0.65))
+        drop-shadow(0 0 10px rgba(0, 167, 255, 0.40));
+    transition: filter var(--transition-slow);
+}
+
+.wwa-map-stage:hover .wwa-map-photo-clip {
+    filter:
+        drop-shadow(0 0 44px rgba(15, 157, 88, 0.85))
+        drop-shadow(0 0 16px rgba(0, 167, 255, 0.55));
+}
+
+.wwa-map-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+    display: block;
+}
+
+/* ── Fila bandera + nombre del país ── */
+.wwa-map-flag-row {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    z-index: 1;
+}
+
+.wwa-map-flag {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    flex-shrink: 0;
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.70)) drop-shadow(0 2px 4px rgba(255, 255, 255, 0.10));
+}
+
+.wwa-map-flag-name {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-white);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Badge flotante — esquina superior derecha de la silueta */
+.wwa-map-badge {
+    position: absolute;
+    top: var(--spacing-sm);
+    right: var(--spacing-sm);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-xs) var(--spacing-md);
+    background: rgba(8, 15, 30, 0.82);
+    border: 1px solid rgba(15, 157, 88, 0.45);
+    border-radius: var(--border-radius-full);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-white);
+    backdrop-filter: blur(8px);
+    z-index: 2;
+    letter-spacing: 0.5px;
+    animation: wwa-badge-float 3s ease-in-out infinite;
+}
+
+.wwa-map-badge .material-icons {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1rem;
+    line-height: 1;
+    color: var(--color-accent-gradient);
+}
+
+@keyframes wwa-badge-float {
+    0%, 100% { transform: translateY(0px);   }
+    50%       { transform: translateY(-7px);  }
+}
+
+/* Label estático — oculto en desktop, visible solo en mobile */
+.wwa-map-label-mobile {
+    display: none;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-xs) var(--spacing-md);
+    background: rgba(8, 15, 30, 0.82);
+    border: 1px solid rgba(15, 157, 88, 0.45);
+    border-radius: var(--border-radius-full);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-white);
+    backdrop-filter: blur(8px);
+    letter-spacing: 0.5px;
+    align-self: flex-end;
+}
+
+.wwa-map-label-mobile .material-icons {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1rem;
+    line-height: 1;
+    color: var(--color-accent-gradient);
+}
+
+/* ── Responsive ajustes ── */
+@media (max-width: 991px) {
+    /* Reducir espacio vertical entre texto y mapa */
+    .wwa-layout {
+        gap: var(--spacing-lg);
+    }
+
+    .wwa-map-stage {
+        padding: 0;
+    }
+
+    .wwa-title {
+        font-size: var(--font-size-3xl);
+    }
+
+    .wwa-map-photo-clip {
+        max-width: 220px;
+    }
+
+    /* Badge flotante — oculto en mobile */
+    .wwa-map-badge {
+        display: none;
+    }
+
+    /* Label estático — visible en mobile sobre la silueta */
+    .wwa-map-label-mobile {
+        display: inline-flex;
+    }
+}

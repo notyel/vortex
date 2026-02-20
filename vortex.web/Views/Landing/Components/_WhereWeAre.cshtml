@@ -1,0 +1,72 @@
+@* WhereWeAre Section - Presencia Nacional en Colombia *@
+
+<section id="donde-estamos" class="section wwa">
+    <div class="container">
+        <div class="wwa-layout">
+
+            @* ── Columna izquierda: texto corporativo ── *@
+            <div class="wwa-content">
+
+                <div class="wwa-label">
+                    <span class="wwa-label-line"></span>
+                    <span class="wwa-label-text">COBERTURA NACIONAL</span>
+                </div>
+
+                <h2 class="wwa-title">
+                    Energía renovable en<br />
+                    <span class="wwa-highlight">cada rincón de Colombia</span>
+                </h2>
+
+                <p class="wwa-description">
+                    Con operaciones activas a lo largo y ancho del territorio nacional,
+                    Vortex Renewables desarrolla proyectos de energía limpia en todas las
+                    regiones del país, aprovechando el inmenso potencial solar, eólico e
+                    hídrico que Colombia ofrece al mundo.
+                </p>
+
+            </div>
+
+            @* ── Columna derecha: mapa protagonista ── *@
+            <div class="wwa-map-stage" aria-label="Mapa de Colombia — presencia nacional Vortex">
+
+                @* Label estático — solo visible en mobile, sobre la silueta *@
+                <div class="wwa-map-label-mobile" aria-hidden="true">
+                    <span class="material-icons">public</span>
+                    <span>Presencia nacional</span>
+                </div>
+
+                @* Marco con anillos y glow: contiene únicamente la silueta recortada *@
+                <div class="wwa-map-frame">
+
+                    <div class="wwa-map-glow" aria-hidden="true"></div>
+                    <div class="wwa-map-ring wwa-map-ring--outer" aria-hidden="true"></div>
+                    <div class="wwa-map-ring wwa-map-ring--inner" aria-hidden="true"></div>
+
+                    @* Badge flotante — solo visible en desktop *@
+                    <div class="wwa-map-badge" aria-hidden="true">
+                        <span class="material-icons">public</span>
+                        <span>Presencia nacional</span>
+                    </div>
+
+                    @* Foto de Castillo San Felipe recortada con la silueta de Colombia *@
+                    <div class="wwa-map-photo-clip">
+                        <img src="~/images/where-we-are/country-bg-colombia-castillo-san-felipe.jpg"
+                             alt="Colombia — Castillo San Felipe de Barajas, Cartagena"
+                             class="wwa-map-photo" />
+                    </div>
+
+                </div>
+
+                @* Bandera circular + nombre del país debajo de la silueta *@
+                <div class="wwa-map-flag-row">
+                    <img src="~/images/where-we-are/flag-colombia.png"
+                         alt="Bandera de Colombia"
+                         class="wwa-map-flag" />
+                    <span class="wwa-map-flag-name">Colombia</span>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
