@@ -1,14 +1,136 @@
+@using vortex.web.Models
 @{
     ViewData["Title"] = "Sobre Nosotros - VORTEX Renewables";
+
+    var heroViewModel = new PageHeroViewModel
+    {
+        Title = "Sobre Nosotros",
+        Breadcrumbs = new List<BreadcrumbItem>
+        {
+            new BreadcrumbItem { Label = "Inicio", Url = Url.Action("Index", "Landing") },
+            new BreadcrumbItem { Label = "Sobre Nosotros" }
+        }
+    };
 }
 
-<section class="section">
+@section Styles {
+    <link rel="stylesheet" href="~/css/components/_page-hero.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/components/_quote.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/pages/about-us.css" asp-append-version="true" />
+}
+
+@await Html.PartialAsync("~/Views/Shared/Components/_PageHero.cshtml", heroViewModel)
+
+<section class="section about-us-container">
     <div class="container">
-        <h1 class="section-title">Sobre Nosotros</h1>
-        <p class="section-subtitle">
-            Vortex Renewables es una compa耥a pionera en soluciones energ閠icas 100% limpias. 
-            Combinamos ingenier韆, gesti髇 ambiental y experiencia jur韉ica para convertir v髍tices 
-            naturales en energ韆 que impulsa comunidades y empresas.
-        </p>
+        <!-- Main About Us Section -->
+        <div class="about-essence-grid">
+            <!-- Text Content -->
+            <div class="about-essence-content">
+                <div>
+                    <div class="about-essence-label">Nuestra Esencia</div>
+                </div>
+                <h2 class="about-essence-title">
+                    Conectando con la <span class="highlight">energ铆a limpia</span>
+                </h2>
+                
+                <p class="about-essence-description">
+                    Vortex Renewables es una empresa especializada en el Desarrollo y Estructuraci贸n de Proyectos de energ铆a renovable. Combinamos ingenier铆a, gesti贸n ambiental y experiencia jur铆dica para convertir recursos naturales en energ铆a que impulsa comunidades y empresas de manera sostenible.
+                </p>
+                <p class="about-essence-description">
+                    Nuestro compromiso es ofrecer un enfoque integral para cada proyecto, garantizando el respeto por el medio ambiente y promoviendo el desarrollo tecnol贸gico a favor de la eficiencia energ茅tica y la sostenibilidad de nuestro pa铆s.
+                </p>
+            </div>
+            
+            <!-- Image Content -->
+            <div class="about-essence-image-wrapper">
+                <img src="~/images/institucional-nosotros.webp" alt="Transformando el futuro energ茅tico" class="about-essence-image" />
+                <div class="about-essence-caption">
+                    <h4 class="caption-subtitle">Sostenibilidad</h4>
+                    <p class="caption-title">Transformando el futuro energ茅tico</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Interstitial Banner Phrase (Consistent with _Quote.cshtml) -->
+<section class="quote-section">
+    <div class="container">
+        <div class="quote-wrapper">
+            <div class="quote-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" />
+                </svg>
+            </div>
+           <blockquote class="quote-text">
+                "La energ铆a del ma帽ana se construye hoy, aprovechando la fuerza inagotable de la naturaleza."
+            </blockquote>
+            <div class="quote-author">
+                <div class="author-name">VORTEX Renewables</div>
+                <div class="author-title">Desarrollo y Estructuraci贸n de Proyectos</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Humanized Mission & Vision Section -->
+<section class="section human-section">
+    <div class="container">
+        
+        <div class="human-grid" style="margin-bottom: var(--spacing-3xl);">
+            <!-- Image left, Text Right (Mission) -->
+            <div class="human-image-wrapper">
+                <div class="human-image-inner">
+                    <img src="~/images/institucional-mision.webp" alt="Transici贸n energ茅tica justa" class="human-image" />
+                    <div class="human-image-caption">
+                        <p class="caption-subtitle">Transici贸n Justa</p>
+                        <p class="caption-title">Impulsando el cambio sostenible</p>
+                    </div>
+                </div>
+            </div>
+            <div class="human-content-box">
+                <div class="human-header-wrapper" style="align-items: center;">
+                    <div class="human-icon-box">
+                        <span class="material-icons">eco</span>
+                    </div>
+                    <div class="human-text-content">
+                        <h2 class="human-title" style="margin: 0 0 4px 0;">Nuestra Misi贸n</h2>
+                        <div class="human-subtitle" style="color: #b0b0b0; font-weight: 500; margin-bottom: 8px; margin-top: 0;">Bienestar Social y Ambiental</div>
+                    </div>
+                </div>
+                <p class="human-desc">
+                    Impulsar la transici贸n hacia un futuro m谩s limpio y sustentable, proveyendo soluciones de energ铆a renovable innovadoras, eficientes y accesibles. Trabajamos de la mano con la naturaleza y las comunidades, enfoc谩ndonos en la estructuraci贸n de proyectos que generen no solo vatios de energ铆a, sino tambi茅n bienestar social, desarrollo econ贸mico y cuidado medioambiental genuino.
+                </p>
+            </div>
+        </div>
+
+        <div class="human-grid">
+            <!-- Text Left, Image Right (Vision) -->
+            <div class="human-content-box vision-box">
+                <div class="human-header-wrapper" style="align-items: center;">
+                    <div class="human-icon-box">
+                        <span class="material-icons">visibility</span>
+                    </div>
+                    <div class="human-text-content">
+                        <h2 class="human-title" style="margin: 0 0 4px 0;">Nuestra Visi贸n</h2>
+                        <div class="human-subtitle" style="color: #b0b0b0; font-weight: 500; margin-bottom: 8px; margin-top: 0;">Excelencia y Compromiso</div>
+                    </div>
+                </div>
+                <p class="human-desc">
+                    Consolidarnos como una empresa referente en el Desarrollo y Estructuraci贸n de Proyectos de energ铆a renovable a nivel nacional e internacional, reconocidos por la solidez t茅cnica, la excelencia operativa y nuestro inquebrantable compromiso ambiental. Aspiramos a ser el motor que inspire a organizaciones de todo tipo a adoptar modelos de producci贸n energ茅tica en completa armon铆a con nuestro planeta.
+                </p>
+            </div>
+            <div class="human-image-wrapper">
+                <div class="human-image-inner">
+                    <img src="~/images/institucional-vision.webp" alt="Visi贸n de futuro limpio" class="human-image" />
+                    <div class="human-image-caption">
+                        <p class="caption-subtitle">Visi贸n de Futuro</p>
+                        <p class="caption-title">Excelencia y Compromiso</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </section>
