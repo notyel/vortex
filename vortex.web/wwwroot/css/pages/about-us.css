@@ -262,6 +262,7 @@
     position: relative;
     border-radius: var(--border-radius-lg);
     overflow: hidden;
+    box-shadow: var(--shadow-xl);
     height: 100%;
     min-height: 300px;
 }
