@@ -1,0 +1,88 @@
+/* Estilos para la página de contacto */
+
+.contact-section-bg {
+    background-color: var(--color-gray-100);
+}
+
+.contact-description {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.contact-description p {
+    color: var(--color-gray-700);
+}
+
+.contact-description .intro {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--color-gray-700);
+}
+
+.contact-highlight {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-3xl);
+    color: var(--color-gray-900);
+    font-weight: var(--font-weight-bold);
+    line-height: 1.3;
+    margin: 0;
+}
+
+.contact-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.contact-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    padding: 2rem 1.5rem;
+    min-width: 280px;
+    max-width: 320px;
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-icon-svg {
+    display: block;
+    margin: 0 auto 1rem auto;
+    width: 48px;
+    height: 48px;
+    background-color: #00b050;
+    -webkit-mask: url('/images/symbol/icon-whatsapp.svg') no-repeat center;
+    mask: url('/images/symbol/icon-whatsapp.svg') no-repeat center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+}
+
+.contact-icon {
+    font-size: 48px;
+    color: #00b050;
+    margin-bottom: 1rem;
+}
+
+.contact-card-title {
+    font-family: var(--font-family-heading);
+    font-weight: 700;
+    color: var(--color-primary);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-card-info {
+    color: var(--color-gray-700);
+}
+
+.contact-form-section .container {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}

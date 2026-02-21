@@ -1,29 +1,54 @@
 @{
     ViewData["Title"] = "Contacto - VORTEX Renewables";
 }
+<partial name="~/Views/Shared/Components/_PageHero.cshtml" model='@(new PageHeroViewModel
+                                                           {
+                                                               Title = "Contacto",
+                                                               Breadcrumbs =
+                                                               [
+                                                                   new BreadcrumbItem { Label = "Inicio", Url = "/" },
+                                                                   new BreadcrumbItem { Label = "Contacto" }
+                                                               ]
+                                                           })' />
 
-<section class="section">
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/components/_page-hero.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/pages/contact.css" asp-append-version="true" />
+}
+
+<section class="section contact-section-bg">
     <div class="container">
-        <h1 class="section-title">Cont�ctanos</h1>
-        <p class="section-subtitle">
-            Estamos aqu� para responder tus preguntas.
-        </p>
-        
-        <div class="contact-info" style="margin-top: 3rem;">
-            <div class="contact-item">
-                <h3>Email</h3>
-                <a href="mailto:info@vortex-renewables.com">info@vortex-renewables.com</a>
+        <div class="contact-description">
+            <p class="intro">
+                Contamos con un equipo de ingenieros especializados en gestión predial integral para proyectos de infraestructura en todas sus etapas. Utilizamos tecnología de última generación para asegurar la precisión en la captura de datos catastrales y legales.
+            </p>
+            <p class="highlight contact-highlight">
+                ¡Contáctanos y descubre cómo podemos ayudarte en tu próximo proyecto!
+            </p>
+        </div>
+        <div class="contact-cards">
+            <div class="contact-card">
+                <span class="contact-icon-svg" aria-label="Whatsapp"></span>
+                <div class="contact-card-title">Whatsapp</div>
+                <div class="contact-card-info">(+57) 300 4912788</div>
             </div>
-            
-            <div class="contact-item" style="margin-top: 2rem;">
-                <h3>Tel�fono</h3>
-                <a href="tel:3004912788">300 4912788</a>
+            <div class="contact-card">
+                <span class="material-icons contact-icon">mail_outline</span>
+                <div class="contact-card-title">Correo electrónico</div>
+                <div class="contact-card-info">info@vortex-renewables.com</div>
             </div>
-            
-            <div class="contact-item" style="margin-top: 2rem;">
-                <h3>Direcci�n Principal</h3>
-                <p>Calle 49 Sur #45A 300<br>Edificio S48 Tower, Oficina 2213</p>
+            <div class="contact-card">
+                <span class="material-icons contact-icon">location_on</span>
+                <div class="contact-card-title">Dirección</div>
+                <div class="contact-card-info">Calle 49 Sur #45A 300<br>Edificio S48 Tower, Oficina 2213</div>
             </div>
         </div>
+    </div>
+</section>
+
+<section class="section contact-form-section">
+    <div class="container">
+        <partial name="~/Views/Shared/Components/_ContactForm.cshtml" />
     </div>
 </section>
